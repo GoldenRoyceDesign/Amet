@@ -508,7 +508,7 @@
         <div class="row">
             <div class="col-md-6 home-form">
                 <h2 class="text-center">How we can help you?</h2>
-                <form>
+                <form onsubmit="register(); return false;">
                     <div class="row mb-3">
                         <div class="col-md-6">
                             <label for="name" class="form-label">Name</label>
@@ -541,7 +541,7 @@
                     <p id="modalMessage"></p>
                 </div>
             </div>
-            
+
             <div class="col-md-6 pe-4 ps-4">
                 <h2 style="text-align: left;">FREQUENTLY ASKED </br> QUESTIONS</h2>
                 <div class="accordion accordion-flush" id="accordionFlushExample">
@@ -795,6 +795,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/home_page_form.js"></script>
 </body>
 
 </html>
