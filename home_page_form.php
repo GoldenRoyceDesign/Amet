@@ -12,7 +12,6 @@ ini_set('display_errors', 1);
 try {
     // Connect to the MySQL database
     $pdo = new PDO("mysql:host=$host;port=$port;dbname=$dbname", $username, $password);
-
     // Set error mode to exception
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
@@ -71,5 +70,3 @@ try {
     echo json_encode(['error' => 'Connection failed: ' . $e->getMessage()]);
 }
 ?>
-
-
