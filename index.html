@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet">
+    <title>AMET City College</title>
+</head>
+
+<body>
+    <!-- Header section start -->
+    <header>
+        <nav class="navbar navbar-expand-lg p-3" style="position: sticky;">
+            <div class="container-fluid">
+                <!-- Left-side logo -->
+                <a class="navbar-brand" href="/">
+                    <img src="assets/images/header/amet_logo.png" alt="Logo" width="200" height="50">
+                </a>
+
+                <!-- Toggler/collapsibe Button (for mobile view) -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+                    style='border: none;'>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Right-side navigation links -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav gap-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about.html">ABOUT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/courses.html">COURSES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/gallery.html">GALLERY</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/faq.html">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact.html">CONTACT US</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.ametuniv.ac.in/">PRE - SEA COURSES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                                href="https://www.ametuniv.ac.in/BCA-Greek-Institute-Maritime-Education.html">BCA GREEK
+                                INSTITUTE OF
+                                MARITIME EDUCATION</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Header section end -->
+
+    <!-- Home page section start -->
+    <section>
+        <div class="homeSection">
+            <div>
+                <h1>Welcome to AMET City College</h1>
+                <button>Explore the sea</button>
+            </div>
+
+            <div class="home_bg_part" style="width: 80%; overflow: hidden;">
+                <div class="row">
+                    <div class="col-md-6" style="position: relative;">
+                        <img src="assets/images/home/payment_detail_image.png" alt="payment_detail_image"
+                            class="overlay" />
+                        <p class="overlay-text">payment - BANK DETAILS</p>
+                    </div>
+                    <div class="col-md-3" id="home_discount_prices">
+                        <h5>DISCOUNT PRICES</h5>
+                        <p>One of the Lowest FEES among the MTI's
+                            Comparison Table AMET City College
+                            Discount Fees With Previous fee.</p>
+                        <button>View all</button>
+                    </div>
+                    <div class="col-md-3" id="home_package_course">
+                        <p>Package Courses</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="home_bg_part1" style="width: 80%; overflow: hidden;">
+            <div class="row">
+                <div class="col-md-6" style="position: relative;">
+                    <img src="assets/images/home/payment_detail_image.png" alt="payment_detail_image" class="overlay" />
+                    <p class="overlay-text">payment - </br> BANK DETAILS</p>
+                </div>
+                <div class="col-md-3" id="home_discount_prices1">
+                    <h5>DISCOUNT PRICES</h5>
+                    <p>One of the Lowest FEES among the MTI's
+                        Comparison Table AMET City College
+                        Discount Fees With Previous fee.</p>
+                    <button>View all</button>
+                </div>
+                <div class="col-md-3" id="home_package_course1">
+                    <p>Package Courses</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Home page section end -->
+
+
+    <!-- Announcement Carousel -->
+    <div class="container-fluid bg-light py-2">
+        <div class="row align-items-center">
+            <div class="col-2 col-md-3">
+                <div class="announcement-topic d-flex align-items-center bg-primary text-white text-center py-1 px-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" fill="currentColor"
+                        class="bi bi-lightning-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09z" />
+                    </svg>
+                    <span class="d-none d-md-inline-block ms-2">Announcements</span>
+                </div>
+            </div>
+            <div class="col-10 col-md-9">
+                <div class="announcement-scroll">
+                    <div class="announcement-content d-flex">
+                        <div class="announcement-item">
+                            <img src="./assets/images/home/new.gif" alt="Announcement" class="me-2" />
+                            <a href="#"><span class="badge bg-warning text-danger me-2">Approved by DG shipping</span>
+                                for the 1.Ship security officer-SSO & 2.Crowd Management, Passenger Safety Training
+                                course-PSF</a>
+                        </div>
+                        <div class="announcement-item">
+                            <img src="./assets/images/home/new.gif" alt="Announcement" class="me-2" />
+                            <a href="#"><span class="badge bg-warning text-danger me-2">ACC FEES</span> One of the
+                                Lowest FEES among the MTI's</a>
+                        </div>
+                        <div class="announcement-item">
+                            <img src="./assets/images/home/new.gif" alt="Announcement" class="me-2" />
+                            <a href="#"><span class="badge bg-warning text-danger me-2">Second Mate</span> Second Mate
+                                Competency Course Fees Rs.30,000/- only</a>
+                        </div>
+                        <div class="announcement-item">
+                            <img src="./assets/images/home/new.gif" alt="Announcement" class="me-2" />
+                            <a href="https://ametcitycollege.com/course-category.php?id=39&type=top-category">
+                                <span class="badge bg-warning text-danger me-2">Second Mate</span> Second Mate
+                                Competency Course Starts on 15/06/24
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Announcement Carousel End-->
+
+
+    <div class="container mt-4">
+        <div class="row d-flex align-items-center justify-content-center text-center">
+            <div class="col-md-3 p-0">
+                <img src="./assets/images/home/count_section_image.png" alt="count_section_image"
+                    class="img-fluid attached-image" />
+            </div>
+            <div class="col-md-3 counter-column"
+                style="background: linear-gradient(0deg, #2E3192 0%, #0E0F2C 100%); color: white;">
+                <h2 class="counter text-white" data-target="40">0</h2>
+                <p>STUDENT POPULATION</p>
+            </div>
+            <div class="col-md-3 counter-column"
+                style="background: linear-gradient(0deg, #2E3192 0%, #0E0F2C 100%); color: white;">
+                <h2 class="counter text-white" data-target="1866">0</h2>
+                <p>CLASS OF 2024
+                    APPLICATIONS</p>
+            </div>
+            <div class="col-md-3 counter-column"
+                style="background: linear-gradient(0deg, #2E3192 0%, #0E0F2C 100%); color: white;">
+                <h2 class="counter text-white" data-target="40">0</h2>
+                <p>REGISTERED STUDENT
+                    ORGANIZATION</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Tabs section start  -->
+    <div class="mt-5">
+        <!-- Tab Content -->
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active p-4" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+                <!-- Features section start -->
+                <div class="m-4 mt-5 course-overtext">
+                    <div class="row">
+                        <!-- Image with Blue Linear Gradient at the Bottom -->
+                        <div
+                            class="col-md-6 d-flex flex-column align-items-center justify-content-center mb-5 position-relative feature-mb-view">
+                            <img src="assets/images/home/feature_image.png" alt="feature_image" class="img-fluid" />
+                            <div class="gradient-overlay"></div>
+                            <p class="overlay-text">Range Safety Course - Details</p>
+                        </div>
+
+                        <!-- Important Features Section -->
+                        <div class="col-md-6 mt-5">
+                            <div class="d-flex flex-column align-items-center justify-content-center">
+                                <div class="feature">
+                                    <h2>IMPORTANT FEATURES</h2>
+                                    <p>Keep yourself updated with what’s new on the campus, upcoming events online and
+                                        on-campus informative seminars, campus selection drives, and
+                                        all current happenings.</p>
+                                </div>
+                                <div class="mt-4">
+                                    <div
+                                        class="d-flex justify-content-center align-items-center feature_course_mb_view">
+                                        <!-- Additional Images with Gradient Overlays and Text -->
+                                        <div class="position-relative">
+                                            <img src="assets/images/home/feature_image_secondmate.png"
+                                                alt="feature_image_secondmate" class="img-fluid" />
+                                            <div class="gradient-overlay"></div>
+                                            <p class="overlay-text">Range Safety Course - Details</p>
+                                        </div>
+                                        <div class="position-relative ms-3">
+                                            <img src="assets/images/home/feature_image_radar.png"
+                                                alt="feature_image_radar" class="img-fluid" />
+                                            <div class="gradient-overlay"></div>
+                                            <p class="overlay-text">Range Safety Course - Details</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Features section End -->
+            </div>
+            <div class="tab-pane fade p-4" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+                <h3>Content for Tab 2</h3>
+                <p>Details and information relevant to Tab 2.</p>
+            </div>
+            <div class="tab-pane fade p-4" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
+                <h3>Content for Tab 3</h3>
+                <p>Details and information relevant to Tab 3.</p>
+            </div>
+            <div class="tab-pane fade p-4" id="tab4" role="tabpanel" aria-labelledby="tab4-tab">
+                <h3>Content for Tab 4</h3>
+                <p>Details and information relevant to Tab 4.</p>
+            </div>
+        </div>
+
+        <!-- Tab Navigation -->
+        <ul class="nav nav-tabs justify-content-between w-100 custom-tabs" id="myTab" role="tablist">
+            <li class="nav-item flex-fill" role="presentation">
+                <button class="nav-link active w-100 text-center" id="tab1-tab" data-bs-toggle="tab"
+                    data-bs-target="#tab1" type="button" role="tab" aria-controls="tab1" aria-selected="true"
+                    style="background: #041274;">IMPORTANT FEATURES</button>
+            </li>
+            <li class="nav-item flex-fill" role="presentation">
+                <button class="nav-link w-100 text-center" id="tab2-tab" data-bs-toggle="tab" data-bs-target="#tab2"
+                    type="button" role="tab" aria-controls="tab2" aria-selected="false"
+                    style="background: #0504AA;">NEWS FEED</button>
+            </li>
+            <li class="nav-item flex-fill" role="presentation">
+                <button class="nav-link w-100 text-center" id="tab3-tab" data-bs-toggle="tab" data-bs-target="#tab3"
+                    type="button" role="tab" aria-controls="tab3" aria-selected="false"
+                    style="background: #2237C6;">EVENT UPDATES</button>
+            </li>
+            <li class="nav-item flex-fill" role="presentation">
+                <button class="nav-link w-100 text-center" id="tab4-tab" data-bs-toggle="tab" data-bs-target="#tab4"
+                    type="button" role="tab" aria-controls="tab4" aria-selected="false"
+                    style="background: #4BC9F1;">ANNOUNCEMENTS</button>
+            </li>
+        </ul>
+
+    </div>
+    <!-- Tabs section End -->
+
+    <!-- Post sea courses section start -->
+    <div class="container mt-5 pt-4 pb-4">
+        <div class="row">
+            <div class="col-md-3 d-flex justify-content-center align-items-center mb-5">
+                <img src="assets/images/home/postsea_course_image.png" alt="postsea_course_image"
+                    class="img-fluid postsea_image" />
+            </div>
+            <div class="col-md-8">
+                <h2 style="color: #2d3192;">AMET: Marine Colleges in Chennai For a Post Sea Courses</h2>
+                <p class="mt-4">AMET City College, a unit of AMET University, embarked in to the area of Post Sea
+                    Training to enrich
+                    the knowledge and expertise of seafarers and Maritime Professionals.</p>
+                <p style="color: #726F6F;">AMET City College is a dynamic and innovative institution committed to
+                    providing high-quality
+                    education and fostering a stimulating learning environment. With a strong focus on academic
+                    excellence, we offer a diverse range of programs designed to meet DG Shipping requirements as well
+                    as the evolving needs of our students and prepare them for
+                    successful careers.</p>
+                <button class="btn custom-button">
+                    CLICK HERE FOR SPECIAL DISCOUNT
+                    <span class="arrow-circle">&#10140;</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Post sea courses section end -->
+
+    <!-- Course offered section start -->
+    <div class="container text-center mt-4">
+        <div class="course_offered">
+            <h2>COURSES OFFERED AT AMET MARINE COLLEGE CHENNAI CITY CAMPUS</h2>
+            <p class="mt-4">Being a unit of the well-regarded AMET University allows AMET City College to leverage
+                the university's resources and reputation in the maritime education sector.</p>
+        </div>
+    </div>
+
+    <!-- carousel part start  -->
+    <div class="mt-4">
+        <div class="carousel-container">
+            <div class="carousel-control p-3 mb-4">
+                <button class="prev" id="prevBtn">&#9664;</button>
+                <button class="next" id="nextBtn">&#9654;</button>
+            </div>
+
+            <div class="carousel-wrapper" id="carouselWrapper">
+                <div class="carousel-card">
+                    <img src="assets/images/home/Navigation Simulators Courses.png" alt="Card 1">
+                    <div class="card-text">Navigation Simulators Courses</div>
+                    <div class="view-details"><a href="/courses.html">View Details</a></div>
+                </div>
+                <div class="carousel-card">
+                    <img src="assets/images/home/Basic Safety Training Courses.png" alt="Card 2">
+                    <div class="card-text">Basic Safety Training Courses</div>
+                    <div class="view-details"><a href="/courses.html">View Details</a></div>
+                </div>
+                <div class="carousel-card">
+                    <img src="assets/images/home/Basic Safety Modular Course.png" alt="Card 3">
+                    <div class="card-text">Basic Safety Modular Course</div>
+                    <div class="view-details"><a href="/courses.html">View Details</a></div>
+                </div>
+                <div class="carousel-card">
+                    <img src="assets/images/home/Competency Courses.png" alt="Card 4">
+                    <div class="card-text">Competency Courses</div>
+                    <div class="view-details"><a href="/courses.html">View Details</a></div>
+                </div>
+                <div class="carousel-card">
+                    <img src="assets/images/home/Advanced Modular Courses.png" alt="Card 5">
+                    <div class="card-text">Advanced Modular Courses</div>
+                    <div class="view-details"><a href="/courses.html">View Details</a></div>
+                </div>
+                <div class="carousel-card">
+                    <img src="assets/images/home/Refresher Courses.png" alt="Card 5">
+                    <div class="card-text">Refresher Courses</div>
+                    <div class="view-details"><a href="/courses.html">View Details</a></div>
+                </div>
+                <div class="carousel-card">
+                    <img src="https://via.placeholder.com/300x200?text=Card+5" alt="Card 5">
+                    <div class="card-text">Card 5</div>
+                    <div class="view-details"><a href="/courses.html">View Details</a></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- carousel part End -->
+    <!-- Course offered section End -->
+
+    <!-- knowledge center section start -->
+    <div class="container mt-4 knowledge-section">
+        <h2 class="text-center mt-5 mb-5">OUR KNOWLEDGE CENTRE</h2>
+        <div class="row knowledge-row">
+            <!-- First Column: Single Image -->
+            <div class="col-md-4 knowledge-col d-flex position-relative">
+                <div class="col-12 p-0 position-relative">
+                    <a href="/library.html" target="_blank">
+                        <img src="assets/images/home/Library.png" alt="Main Image" class="img-fluid knowledge-img">
+                        <div class="knowledge-overlay">
+                            <span class="knowledge-text">E - Library</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Second Column: Multiple Rows with Images -->
+            <div class="col-md-4 knowledge-col d-flex flex-column">
+                <div class="row knowledge-inner-row flex-fill">
+                    <div class="col-12 p-0 position-relative">
+                        <a href="/paper.html" target="_blank">
+                            <img src="assets/images/home/Paper.png" alt="Image 2" class="img-fluid knowledge-img">
+                            <div class="knowledge-overlay">
+                                <span class="knowledge-text">E - Paper</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="row knowledge-inner-row flex-fill">
+                    <div class="col-12 p-0 position-relative">
+                        <a href="https://drive.google.com/drive/folders/1tb9owZ8Zj3Putw3d-g5vJVfA8MC8rUaK"
+                            target="_blank">
+                            <img src="assets/images/home/OPRC.png" alt="Image 3" class="img-fluid knowledge-img">
+                            <div class="knowledge-overlay">
+                                <span class="knowledge-text">OPRC</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Third Column: Multiple Rows with Images -->
+            <div class="col-md-4 knowledge-col d-flex flex-column">
+                <div class="row knowledge-inner-row flex-fill">
+                    <div class="col-12 p-0 position-relative">
+                        <a href="/event.html" target="_blank">
+                            <img src="assets/images/home/Event.png" alt="Image 5" class="img-fluid knowledge-img">
+                            <div class="knowledge-overlay">
+                                <span class="knowledge-text">Event</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="row knowledge-inner-row flex-fill">
+                    <div class="col-12 p-0 position-relative">
+                        <a href="https://docs.google.com/document/d/1qC6bLHTbpstdVMSi0-xvXrJ3wJ7IuMtlc-gjLu60MMU/edit"
+                            target="_blank">
+                            <img src="assets/images/home/Alumni.png" alt="Image 6" class="img-fluid knowledge-img">
+                            <div class="knowledge-overlay">
+                                <span class="knowledge-text">Alumni</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- knowledge center section End -->
+
+    <!-- Testimonials section start -->
+    <div class="mt-5 p-5 testimonials">
+        <h2 class="text-white">AMET City College Chennai Campus Alumni Testimonials</h2>
+
+        <div class="container p-5">
+            <div class="row pe-5 ps-5 me-5 ms-5">
+                <!-- First Column: Full Height Video -->
+                <div class="col-md-6 d-flex flex-column justify-content-between">
+                    <div class="testimonial-box h-100">
+                        <img src="assets/images/home/testimonial1.png" alt="Testimonial 1"
+                            class="testimonial-video h-100" data-bs-toggle="modal" data-bs-target="#videoModal"
+                            data-video="sZ8BrQ_1qUI">
+                        <div class="testimonial-caption">Mr. Enrique Jose, Third Officer, <br>LPG tanker</div>
+                    </div>
+                </div>
+
+                <!-- Second Column: Two Equal Rows of Videos -->
+                <div class="col-md-6">
+                    <div class="d-flex flex-column h-100">
+                        <!-- Top Video Row -->
+                        <div class="flex-grow-1 mb-3 d-flex flex-column">
+                            <img src="assets/images/home/testimonial2.png" alt="Testimonial 2"
+                                class="testimonial-video h-100" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                data-video="onAtFd_WWFw">
+                            <div class="testimonial-caption">Mr. Tharun, Second Officer <br>Maersk</div>
+                        </div>
+                        <!-- Bottom Video Row -->
+                        <div class="flex-grow-1 d-flex flex-column">
+                            <img src="assets/images/home/testimonial3.png" alt="Testimonial 3"
+                                class="testimonial-video h-100" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                data-video="kOQc-39NjuE">
+                            <div class="testimonial-caption">Mr. Syed Ahmed, Chief Officer <br>Maersk</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Video Playback -->
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="videoModalLabel">Video Testimonial</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe id="modalVideo" class="w-100" height="315" src="" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonials section start  -->
+
+
+    <!-- Contact Form Section start -->
+    <div class="container m-5 pt-4 home-page-contact">
+        <div class="row">
+            <div class="col-md-6 home-form">
+                <h2 class="text-center">How we can help you?</h2>
+                <form>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                        </div>
+                    </div>
+                    <div class="row mb-3 home-form">
+                        <div class="col-md-6">
+                            <label for="subject" class="form-label">Subject</label>
+                            <textarea class="form-control" id="subject" rows="3" placeholder="Subject"
+                                required></textarea>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="contact" class="form-label">Contact Number</label>
+                            <input type="tel" class="form-control" id="contact" placeholder="Your Contact Number"
+                                required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+            </div>
+
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span id="closeModal" class="close">&times;</span>
+                    <p id="modalMessage"></p>
+                </div>
+            </div>
+            
+            <div class="col-md-6 pe-4 ps-4">
+                <h2 style="text-align: left;">FREQUENTLY ASKED </br> QUESTIONS</h2>
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                                1. What are all the DGS courses you offer that we are exempted from E - Learning?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Competency courses as well as the simulator courses are exempted
+                                from E-learning.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                aria-controls="flush-collapseTwo">
+                                2. How many attempts have been made to complete the E-Learning assessments?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body"> Any Number of Attempts</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                                3. What are all the courses that were exempted from the Exit Exam offered by AMET Marine
+                                College Chennai City Campus?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Competency courses, along with navigational and simulator
+                                courses, are exempt from e-learning requirements.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                                4. Do students need to pay the exit exam fee again if they are repeating the exam?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">If the number of attempts exceeds three, the individual would
+                                have to repeat the course.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                                5. How many attempts are allowed for re-appearing in the Exit exam?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Maximum of three attempts.</div>
+                        </div>
+                    </div>
+                    <!-- <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                                6. What is the attendance criteria for the courses? 
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body"> 100% is required as per the DG Shipping </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                                7. Does College help in Getting the CDC(Continuous Discharge Certificate)?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body"> AMET City College assists in getting CDC.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                                8. Does College help in Getting the CDC(Continuous Discharge Certificate)?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">AMET City College assists in getting CDC.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                                9. How to apply for the courses?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body"></div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                                10. Do you provide accommodation?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body"> Yes we are providing accommodation at nominal cost.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                                11. Does your institution provide lunch? 
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body"> Yes we are providing lunch as complementary</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                                12. Any Discounts will be provided for package courses?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body"> Yes </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact Form Section End -->
+
+
+    <!-- Footer Section start -->
+    <footer class="footer">
+        <div class="container p-0 m-0">
+            <div class="row">
+                <!-- Map Column -->
+                <div class="col-md-3 mb-4">
+                    <h5>Our Location</h5>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62171.77643805455!2d80.19815!3d13.115902000000002!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526fba5be15e61%3A0xa53e774c9e6a641!2sAMET%20City%20College!5e0!3m2!1sen!2sin!4v1724925072163!5m2!1sen!2sin"
+                        width="100%" height="190" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+
+                <!-- Address Column -->
+                <div class="col-md-3 mb-4">
+                    <h5>AMET City College</h5>
+                    <p>R.R. Tower, 61/54,
+                        Jawaharlal Nehru Inner Ring Road,
+                        (200 feet Road), Sastha Nagar,
+                        Villivakkam, chennai - 600 049
+                        TamilNadu, India
+                    </p>
+                    <p><span style="font-weight: bold;">Landline:</span> +91-91760-44766<br><span
+                            style="font-weight: bold;">Mobile:</span> 9176079666<br><span
+                            style="font-weight: bold;">Email:</span> ametcitycollege@gmail.com</p>
+                </div>
+
+                <!-- Useful Links Column -->
+                <div class="col-md-2 mb-4">
+                    <h5>Useful Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="/courses.html">Courses</a></li>
+                        <li><a href="/contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Payment & Policies Column -->
+                <div class="col-md-2 mb-4">
+                    <h5>Payment and Policies</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Refund Policy and Payment</a></li>
+                        <li><a href="#">Terms and Conditions</a></li>
+                        <li><a href="#">Privacy policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media Column -->
+                <div class="col-md-2 mb-4">
+                    <h5>Our Social Networks</h5>
+                    <p>Be in touch with us in all Social Media Platforms</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/AMETCityCollege.PostSeaTraining" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.youtube.com/channel/UC04qpdcqGEaqoGfz1_TC4HQ" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/feed/?midToken=AQHqRt6TyI68uw&midSig=2z48tNlQh-va41&trk=eml-email_network_conversations_01-footer_promo-2-footer_see_all&trkEmail=eml-email_network_conversations_01-footer_promo-2-footer_see_all-null-cmglyf~ky5fwppo~yc-null-neptune/feed" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://api.whatsapp.com/send/?phone=919176079666&text=Hai&type=phone_number&app_absent=0" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/amet_city_college/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Bottom Row -->
+            <div class="footer-bottom">
+                © Copyright<span style="color: black; font-weight: 600;"> Amet City College.</span> All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap and Font Awesome Scripts -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
