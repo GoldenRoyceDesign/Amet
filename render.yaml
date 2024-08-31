@@ -1,8 +1,0 @@
-services:
-  - type: web
-    name: my-php-app # Change this to the name of your app
-    env: php
-    plan: free # Use 'starter' or another plan for higher resource limits
-    buildCommand: "" # No build step needed for basic PHP apps
-    startCommand: php -S 0.0.0.0:80 -t home_page_form.php # Change 'public' to your app's document root folder
-    autoDeploy: true

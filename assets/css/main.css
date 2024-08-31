@@ -645,10 +645,9 @@ textarea {
     font-size: 16px;
 }
 
-/* Modal style */
 
 /* Modal styles */
-.modal {
+.home-page-contact .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1000; /* Sit on top */
@@ -661,7 +660,7 @@ textarea {
 }
 
 /* Modal content styles */
-.modal-content {
+.home-page-contact .modal-content {
     background-color: #fefefe;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
@@ -672,7 +671,7 @@ textarea {
 }
 
 /* Close button styles */
-.close {
+.home-page-contact .close {
     color: #aaa;
     float: right; /* Float right to position in the top-right corner */
     font-size: 28px;
@@ -682,8 +681,8 @@ textarea {
     right: 15px; /* Distance from the right */
 }
 
-.close:hover,
-.close:focus {
+.home-page-contact .close:hover,
+.home-page-contact .close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
