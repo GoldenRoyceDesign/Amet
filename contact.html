@@ -20,56 +20,85 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg p-3">
-        <div class="container-fluid">
-            <!-- Left-side logo -->
-            <a class="navbar-brand" href="/">
-                <img src="assets/images/header/amet_logo.png" alt="Logo" width="200" height="50">
-            </a>
+    <!-- Header section start -->
+    <header>
+        <nav class="navbar navbar-expand-lg p-3" style="position: sticky;">
+            <div class="container-fluid">
+                <!-- Left-side logo -->
+                <a class="navbar-brand" href="/">
+                    <img src="assets/images/header/amet_logo.png" alt="Logo" width="200" height="50">
+                </a>
 
-            <!-- Toggler/collapsibe Button (for mobile view) -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style='border: none;'>
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                <!-- Toggler/collapsibe Button (for mobile view) -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+                    style='border: none;'>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <!-- Right-side navigation links -->
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav gap-3">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">HOME</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/about.html">ABOUT</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/courses.html">COURSES</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/gallery.html">GALLERY</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/faq.html">FAQ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/contact.html">CONTACT US</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://www.ametuniv.ac.in/">PRE - SEA COURSES</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link"
-                            href="https://www.ametuniv.ac.in/BCA-Greek-Institute-Maritime-Education.html">BCA GREEK
-                            INSTITUTE OF
-                            MARITIME EDUCATION</a>
-                    </li>
-                </ul>
+                <!-- Right-side navigation links -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav gap-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">HOME</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                ABOUT
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                                <li><a class="dropdown-item" href="/about.html">ABOUT US</a></li>
+                                <li><a class="dropdown-item" href="/team.html">OUR TEAM</a></li>
+                                <li><a class="dropdown-item" href="/timeline.html">TIMELINE OF ACC</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                COURSES
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
+                                <li><a class="dropdown-item" href="/courses.html#undergraduate">NAVIGATION SIMULATORS
+                                        COURSES</a></li>
+                                <li><a class="dropdown-item" href="/courses.html#shortterm">BASIC SAFETY TRAINING
+                                        COURSES</a></li>
+                                <li><a class="dropdown-item" href="/courses.html#shortterm">BASIC MODULAR COURSES</a>
+                                </li>
+                                <li><a class="dropdown-item" href="/courses.html#shortterm">COMPETENCY COURSES</a></li>
+                                <li><a class="dropdown-item" href="/courses.html#shortterm">ADVANCED MODULAR COURSES</a>
+                                </li>
+                                <li><a class="dropdown-item" href="/courses.html#shortterm">REFRESHER COURSES</a></li>
+                                <li><a class="dropdown-item" href="/courses.html#shortterm">PACKAGE COURSES</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/gallery.html">GALLERY</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/faq.html">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact.html">CONTACT US</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.ametuniv.ac.in/">PRE - SEA COURSES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                                href="https://www.ametuniv.ac.in/BCA-Greek-Institute-Maritime-Education.html">BCA GREEK
+                                INSTITUTE OF
+                                MARITIME EDUCATION</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
+    <!-- Header section end -->
 
     <!-- Contact section start -->
-    <!-- <div class="container my-5 contactUs">
+    <div class="container my-5 contactUs">
         <div class="row">
             <div class="col-md-6 p-0">
                 <img src="assets/images/contact/bulk carrier ship.png" alt="Left Side Image" class="img-fluid">
@@ -118,7 +147,7 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
     <!-- Contact section End -->
 
     <!-- Footer Section start -->

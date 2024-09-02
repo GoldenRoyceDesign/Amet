@@ -14,6 +14,14 @@ a {
 
 /* Navbar style */
 
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
 .navbar-nav .nav-item a {
     color: #000000;
     font-size: 14px;
@@ -24,6 +32,20 @@ a {
     font-size: 14px;
     background-color: #2d3192;
 }
+
+/* CSS to make the dropdown display on hover */
+.navbar-nav .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+    z-index: 1050;
+    position: absolute;
+    padding: 5px;
+}
+
+.navbar-nav .dropdown:hover .dropdown-menu>li {
+    margin-bottom: 10px !important;
+}
+
 
 /* Home section style */
 
@@ -36,6 +58,7 @@ a {
     text-align: left;
     padding: 50px;
     position: relative;
+    z-index: 1;
 }
 
 .homeSection h1 {
@@ -543,16 +566,17 @@ textarea {
     color: white;
 }
 
-.contactUs .contact-bg{
+.contactUs .contact-bg {
     background-color: #2E3192;
 }
 
-.contactUs .btn{
+.contactUs .btn {
     background: white;
     color: #2E3192;
 }
 
-.contactUs .form-section input, textarea {
+.contactUs .form-section input,
+textarea {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     background: transparent;
@@ -573,15 +597,286 @@ textarea {
     background: transparent;
     color: black;
 }
+
 .contactUs .form-section h2 {
     margin-bottom: 20px;
     font-size: 24px;
     font-weight: bold;
 }
 
-.contactUs  .img-fluid {
+.contactUs .img-fluid {
     object-fit: cover;
     height: 100%;
+}
+
+/* About page style */
+
+.about-column .why-choose {
+    background-color: #2E3192;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    height: 200px;
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+
+.default-text {
+    font-size: 16px;
+    font-weight: normal;
+    margin-top: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.default-image {
+    width: 50px;
+    margin-top: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.hover-text {
+    font-size: 16px;
+    font-weight: normal;
+    margin-top: 10px;
+    padding: 12px;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    transition: opacity 0.3s ease;
+    width: 100%;
+}
+
+.why-choose:hover {
+    background-color: #9193D9;
+}
+
+.about-column:hover .default-text {
+    opacity: 0;
+}
+
+.about-column:hover .default-image {
+    opacity: 0;
+}
+
+.about-column:hover .hover-text {
+    opacity: 1;
+}
+
+/* Team section style */
+
+.team {
+    background-image: url('/assets/images/about/team_bg.png');
+    background-size: cover;
+    background-position: center;
+    height: auto;
+    width: 100%;
+    padding: 100px;
+    color: white;
+    text-align: center;
+}
+
+.about-team .head {
+    position: relative;
+    overflow: hidden;
+    max-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.about-team .head img {
+    width: 70%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+
+.about-team .head .designation {
+    position: absolute;
+    bottom: 0;
+    width: 70%;
+    height: 100%;
+    background-color: rgb(46, 49, 146, 0.5);
+    color: #fff;
+    padding: 10px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.about-team .head:hover .designation {
+    transform: translateY(0);
+}
+
+
+.about-team .head div > .profile:hover{
+    color: white;
+}
+
+
+.about-team .head div > .profile{
+    border: none;
+    background: none;
+    font-weight: bold;
+    color: white;
+}
+
+/* Timeline style */
+
+.timeline{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeline img{
+    width: 75%;
+}
+
+/* Gallery style */
+
+/* Main large image */
+.gallery .img-collage-main {
+    grid-area: main;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Bottom images */
+.gallery .collage-bottom-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px; /* Space between images */
+    grid-area: bottom1 / bottom2;
+}
+
+/* Bottom images styling */
+.gallery .img-collage-bottom {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Additional styling for images on the left column */
+.gallery .img-collage-left {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Image container for positioning the text overlay */
+.gallery .image-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* General image styling */
+.gallery .img-collage-left,
+.gallery .img-collage-main,
+.gallery .img-collage-bottom {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Text overlay styling */
+.gallery .text-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background: rgb(46, 49, 146, 0.5); /* Semi-transparent black background */
+    color: white;
+    padding-top: 20px;
+    font-size: 15px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.gallery #gallery-text{
+    height: 25%;
+    padding-top: 15px;
+}
+
+/* Course page style */
+
+.blue-box{
+    box-sizing: border-box;
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(to right, rgb(46, 49, 146, 0.9) 40%, transparent);;
+}
+
+
+
+/* Make the tabs look more prominent */
+.course-page .nav-pills .nav-link {
+    background-color: #f8f9fa;
+    color: #000;
+    border: 1px solid #ddd;
+    border-radius: 0;
+    margin-bottom: 5px;
+    text-align: left;
+    font-size: 14px;
+}
+
+/* Active tab styling */
+.course-page .nav-pills .nav-link.active {
+    background-color: #2E3192;
+    color: #fff;
+}
+
+.course-page .tab-content{
+    border: 1px solid #ddd;
+}
+
+.course-page .tab-content{
+    border: none;
+    background: none;
+}
+
+.course-page .table th{
+    background: #22C9CF;
+    color: white;
+}
+
+.course-page .table select{
+    background: #8E90D3;
+    color: white;
+}
+
+.course-page .table button{
+    background: #8E90D3;
+    color: white;
+}
+
+
+.course-page .responsive-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.course-page .responsive-table th,
+.course-page .responsive-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.course-page .responsive-table .course-name{
+    width: 40%;
 }
 
 
@@ -648,37 +943,37 @@ textarea {
 
 /* Modal styles */
 .home-page-contact .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1000; /* Sit on top */
+    display: none;
+    position: fixed;
+    z-index: 1000;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0,0,0,0.4); /* Black background with opacity */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 /* Modal content styles */
 .home-page-contact .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 50%; /* Could be more or less, depending on screen size */
+    width: 50%;
     height: auto;
-    position: relative; /* Needed to position the close button */
+    position: relative;
 }
 
 /* Close button styles */
 .home-page-contact .close {
     color: #aaa;
-    float: right; /* Float right to position in the top-right corner */
+    float: right;
     font-size: 28px;
     font-weight: bold;
-    position: absolute; /* Absolute positioning */
-    top: 10px; /* Distance from the top */
-    right: 15px; /* Distance from the right */
+    position: absolute;
+    top: 10px;
+    right: 15px;
 }
 
 .home-page-contact .close:hover,

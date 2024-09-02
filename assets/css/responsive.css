@@ -62,6 +62,19 @@
         padding: 0 !important;
         margin: 0 !important;
     }
+
+    .timeline img{
+        width: 80%;
+    }
+
+    .gallery{
+        padding: 0;
+    }
+
+    .gallery .text-overlay {
+        font-size: 14px;
+        height: 50%;
+    }
 }
 
 /* Mobile view style */
@@ -250,6 +263,31 @@
         padding: 30px !important;
     }
 
+    .team {
+        padding: 50px;
+    }
+
+    .timeline img{
+        width: 100%;
+    }
+
+    .gallery .collage-container .collage-bottom-row{
+        flex-direction: column;
+    }
+
+    .gallery .text-overlay {
+        font-size: 14px;
+        height: 40%;
+    }
+    
+    .course-page .responsive-table th,
+    .course-page .responsive-table td {
+        padding: 10px;
+        border: 1px solid #ddd;
+        text-align: left;
+        white-space: nowrap;
+    }
+    
 }
 
 
@@ -268,6 +306,9 @@
     .navbar{
         padding: 3px !important;
     }
-
+    .gallery .text-overlay {
+        font-size: 12px;
+        height: 40%;
+    }
     
 }

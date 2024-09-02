@@ -20,57 +20,86 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg p-3">
-        <div class="container-fluid">
-            <!-- Left-side logo -->
-            <a class="navbar-brand" href="/">
-                <img src="assets/images/header/amet_logo.png" alt="Logo" width="200" height="50">
-            </a>
+    <!-- Header section start -->
+    <header>
+        <nav class="navbar navbar-expand-lg p-3" style="position: sticky;">
+            <div class="container-fluid">
+                <!-- Left-side logo -->
+                <a class="navbar-brand" href="/">
+                    <img src="assets/images/header/amet_logo.png" alt="Logo" width="200" height="50">
+                </a>
 
-            <!-- Toggler/collapsibe Button (for mobile view) -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style='border: none;'>
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                <!-- Toggler/collapsibe Button (for mobile view) -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+                    style='border: none;'>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <!-- Right-side navigation links -->
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav gap-3">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">HOME</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/about.html">ABOUT</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/courses.html">COURSES</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/gallery.html">GALLERY</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/faq.html">FAQ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/contact.html">CONTACT US</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://www.ametuniv.ac.in/">PRE - SEA COURSES</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link"
-                            href="https://www.ametuniv.ac.in/BCA-Greek-Institute-Maritime-Education.html">BCA GREEK
-                            INSTITUTE OF
-                            MARITIME EDUCATION</a>
-                    </li>
-                </ul>
+                <!-- Right-side navigation links -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav gap-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">HOME</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                ABOUT
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                                <li><a class="dropdown-item" href="/about.html">ABOUT US</a></li>
+                                <li><a class="dropdown-item" href="/team.html">OUR TEAM</a></li>
+                                <li><a class="dropdown-item" href="/timeline.html">TIMELINE OF ACC</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                COURSES
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
+                                <li><a class="dropdown-item" href="/courses.html#undergraduate">NAVIGATION SIMULATORS
+                                        COURSES</a></li>
+                                <li><a class="dropdown-item" href="/courses.html#shortterm">BASIC SAFETY TRAINING
+                                        COURSES</a></li>
+                                <li><a class="dropdown-item" href="/courses.html#shortterm">BASIC MODULAR COURSES</a>
+                                </li>
+                                <li><a class="dropdown-item" href="/courses.html#shortterm">COMPETENCY COURSES</a></li>
+                                <li><a class="dropdown-item" href="/courses.html#shortterm">ADVANCED MODULAR COURSES</a>
+                                </li>
+                                <li><a class="dropdown-item" href="/courses.html#shortterm">REFRESHER COURSES</a></li>
+                                <li><a class="dropdown-item" href="/courses.html#shortterm">PACKAGE COURSES</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/gallery.html">GALLERY</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/faq.html">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact.html">CONTACT US</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.ametuniv.ac.in/">PRE - SEA COURSES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                                href="https://www.ametuniv.ac.in/BCA-Greek-Institute-Maritime-Education.html">BCA GREEK
+                                INSTITUTE OF
+                                MARITIME EDUCATION</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
+    <!-- Header section end -->
 
 
     <!-- FAQ section start -->
-    <!-- <div class="container mt-5">
+    <div class="container mt-5">
         <h2>FREQUENTLY ASKED QUESTIONS</h2>
 
         <div class="accordion p-4 mt-5" id="accordionExample">
@@ -324,8 +353,9 @@
 
     <div class="container m-4 d-flex flex-column align-items-center justify-content-center gap-3">
         <h2>Still Have any Question ?</h2>
-        <button style="padding: 10px 20px; background: white;"><a href="/contact.html" style="color: #2E3192;">Contact us Now</a></button>
-    </div> -->
+        <button style="padding: 10px 20px; background: white;"><a href="/contact.html" style="color: #2E3192;">Contact
+                us Now</a></button>
+    </div>
     <!-- FAQ section End -->
 
 
@@ -381,11 +411,16 @@
                     <h5>Our Social Networks</h5>
                     <p>Be in touch with us in all Social Media Platforms</p>
                     <div class="social-icons">
-                        <a href="https://www.facebook.com/AMETCityCollege.PostSeaTraining" target="_blank"><i class="fab fa-facebook"></i></a>
-                        <a href="https://www.youtube.com/channel/UC04qpdcqGEaqoGfz1_TC4HQ" target="_blank"><i class="fab fa-youtube"></i></a>
-                        <a href="https://www.linkedin.com/feed/?midToken=AQHqRt6TyI68uw&midSig=2z48tNlQh-va41&trk=eml-email_network_conversations_01-footer_promo-2-footer_see_all&trkEmail=eml-email_network_conversations_01-footer_promo-2-footer_see_all-null-cmglyf~ky5fwppo~yc-null-neptune/feed" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://api.whatsapp.com/send/?phone=919176079666&text=Hai&type=phone_number&app_absent=0" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                        <a href="https://www.instagram.com/amet_city_college/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/AMETCityCollege.PostSeaTraining" target="_blank"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="https://www.youtube.com/channel/UC04qpdcqGEaqoGfz1_TC4HQ" target="_blank"><i
+                                class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/feed/?midToken=AQHqRt6TyI68uw&midSig=2z48tNlQh-va41&trk=eml-email_network_conversations_01-footer_promo-2-footer_see_all&trkEmail=eml-email_network_conversations_01-footer_promo-2-footer_see_all-null-cmglyf~ky5fwppo~yc-null-neptune/feed"
+                            target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://api.whatsapp.com/send/?phone=919176079666&text=Hai&type=phone_number&app_absent=0"
+                            target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/amet_city_college/" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
