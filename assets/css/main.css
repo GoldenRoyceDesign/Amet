@@ -866,6 +866,8 @@ textarea {
 .course-page .responsive-table {
     width: 100%;
     border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
 }
 
 .course-page .responsive-table th,
@@ -873,13 +875,21 @@ textarea {
     padding: 10px;
     border: 1px solid #ddd;
     text-align: left;
+    word-wrap: break-word;
+    text-align: center;
 }
 
-.course-page .responsive-table .course-name{
-    width: 40%;
+
+.course-page .table {
+    table-layout: fixed;
+    width: 100%;
 }
 
-
+.course-page .table th,
+.course-page .table td {
+    word-wrap: break-word;
+    text-align: center; /* Center-aligns text in all columns */
+}
 
 /* Footer section style */
 
