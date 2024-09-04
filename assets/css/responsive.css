@@ -333,6 +333,11 @@
     .course-page .table button{
         width: fit-content;
     }
+
+    .automaticradar .fee-detail h4{
+        font-size: 16px;
+    }
+    
 }
 
 
@@ -343,6 +348,30 @@
     }
 }
 
+@media screen and (min-width: 350px) and (max-width: 400px) {
+    .seat-availability .course-head{
+        width: 90vw;
+    }
+
+    .seat-availability .sub-course-head{
+        width: 90vw;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .seat-availability .tables th,
+    .tables td {
+        padding: 0.75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+        font-size: 12px;
+    }
+
+    .automaticradar .fee-detail > div{
+        flex-direction: column;
+        gap: 10px !important;
+    }
+}
 
 @media screen and (max-width: 326px) {
     .navbar-brand img {
@@ -356,5 +385,14 @@
         font-size: 12px;
         height: 40%;
     }
+
+    .seat-availability .tables th,
+    .tables td {
+        padding: 0.75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+        font-size: 10px;
+    }
+    
     
 }

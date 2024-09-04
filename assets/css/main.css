@@ -891,6 +891,73 @@ textarea {
     text-align: center; /* Center-aligns text in all columns */
 }
 
+.seat-availability {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.seat-availability .course-head{
+    box-sizing: border-box;
+    padding: 15px;
+    background: #2E3192;
+    color: white;
+    min-width: 80%;
+    border-radius: 10px 10px 0 0;
+    font-weight: bold;
+}
+
+.seat-availability .sub-course-head{
+    box-sizing: border-box;
+    padding: 5px;
+    background: #2E3192;
+    color: white;
+    min-width: 80%;
+}
+
+.seat-availability .tables {
+    width: 80%;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    margin-bottom: 1rem;
+    color: #212529;
+    border-collapse: collapse;
+}
+
+.seat-availability .tables th,
+.tables td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+.seat-availability .tables thead th {
+    background: #22C9CF;
+    color: white;
+    font-weight: bold;
+    text-align: left;
+}
+
+.tables tbody tr:nth-child(odd) {
+    background-color: #ffffff; /* Light gray for odd rows */
+}
+
+.tables tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* White for even rows */
+}
+
+
+.automaticradar .marine-courses{
+    color: #2E3192;
+    text-align: left;
+}
+
+
+
+
 /* Footer section style */
 
 .footer {
