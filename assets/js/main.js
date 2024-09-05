@@ -1,7 +1,7 @@
 // Function to animate the counters
 document.addEventListener('DOMContentLoaded', () => {
     const counters = document.querySelectorAll('.counter');
-    const speed = 50; // Adjust the speed of the counter
+    const speed = 80; // Adjust the speed of the counter
 
     counters.forEach(counter => {
         const updateCount = () => {
@@ -59,4 +59,23 @@ document.addEventListener('DOMContentLoaded', () => {
         modalVideo.src = ''; // Clear the src to stop the video
     });
 
+});
+
+
+document.getElementById('discountForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Simulate form processing logic (e.g., an AJAX request)
+    setTimeout(function () {
+        // Close the discount modal
+        var discountModal = bootstrap.Modal.getInstance(document.getElementById('discountModal'));
+        discountModal.hide();
+
+        // Reset the form fields
+        document.getElementById('discountForm').reset();
+
+        // Show the success modal
+        var successModal = new bootstrap.Modal(document.getElementById('successModal'));
+        successModal.show();
+    }, 500); // Simulated delay for form processing
 });

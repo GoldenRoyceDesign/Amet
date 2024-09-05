@@ -1,10 +1,13 @@
 function register() {
     const form = document.querySelector('form');
     const name = document.getElementById('name').value;
+    const lastName = document.getElementById('lastName').value;
     const email = document.getElementById('email').value;
-    const contact = document.getElementById('contact').value;
-    const subject = document.getElementById('subject').value;
+    const course = document.getElementById('course').value;
+    const message = document.getElementById('message').value;
+    const phone = document.getElementById('phone').value;
 
+    // Function to show modal with success or error message
     function showModal(message, isSuccess = false) {
         const modal = document.getElementById("myModal");
         const modalMessage = document.getElementById("modalMessage");
@@ -16,23 +19,28 @@ function register() {
         });
     }
 
+    // Function to validate email format
     function validateEmail(email) {
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailPattern.test(email);
     }
 
-    if (!name || !email || !contact || !subject) {
+    // Check if all fields are filled
+    if (!name || !lastName || !email || !course || !message || !phone) {
         showModal("All fields are required.");
         return false;
     }
 
+    // Validate email format
     if (!validateEmail(email)) {
         showModal("Please enter a valid email address.");
         return false;
     }
 
-    const formData = { name, email, contact, subject };
+    // Create an object with form data
+    const formData = { name, lastName, email, course, message, phone };
 
+    // Send form data to the server using fetch
     fetch("home_page_form.php", {
         method: "POST",
         body: JSON.stringify(formData),
@@ -42,7 +50,7 @@ function register() {
     .then(data => {
         if (data.success) {
             showModal(data.success, true);
-            form.reset();
+            form.reset(); // Reset the form fields
         } else {
             showModal(data.error);
         }

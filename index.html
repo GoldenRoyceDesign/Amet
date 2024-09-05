@@ -43,7 +43,8 @@
                             <a class="nav-link" href="/">HOME</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
                                 ABOUT
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
@@ -53,17 +54,22 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
                                 COURSES
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
-                                <li><a class="dropdown-item" href="/courses.html#undergraduate">NAVIGATION SIMULATORS COURSES</a></li>
-                                <li><a class="dropdown-item" href="/courses.html#shortterm">BASIC SAFETY TRAINING COURSES</a></li>
-                                <li><a class="dropdown-item" href="/courses.html#shortterm">BASIC MODULAR COURSES</a></li>
-                                <li><a class="dropdown-item" href="/courses.html#shortterm">COMPETENCY COURSES</a></li>
-                                <li><a class="dropdown-item" href="/courses.html#shortterm">ADVANCED MODULAR COURSES</a></li>
-                                <li><a class="dropdown-item" href="/courses.html#shortterm">REFRESHER COURSES</a></li>
-                                <li><a class="dropdown-item" href="/courses.html#shortterm">PACKAGE COURSES</a></li>
+                                <li><a class="dropdown-item" href="/courses.html?tab=tab1">NAVIGATION SIMULATORS
+                                        COURSES</a></li>
+                                <li><a class="dropdown-item" href="/courses.html?tab=tab2">BASIC SAFETY TRAINING
+                                        COURSES</a></li>
+                                <li><a class="dropdown-item" href="/courses.html?tab=tab3">BASIC MODULAR COURSES</a>
+                                </li>
+                                <li><a class="dropdown-item" href="/courses.html?tab=tab4">COMPETENCY COURSES</a></li>
+                                <li><a class="dropdown-item" href="/courses.html?tab=tab5">ADVANCED MODULAR COURSES</a>
+                                </li>
+                                <li><a class="dropdown-item" href="/courses.html?tab=tab6">REFRESHER COURSES</a></li>
+                                <li><a class="dropdown-item" href="/courses.html?tab=tab7">PACKAGE COURSES</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -96,7 +102,7 @@
         <div class="homeSection">
             <div>
                 <h1>Welcome to AMET City College</h1>
-                <button>Explore the sea</button>
+                <button><a href="courses.html" style="color: white; text-decoration: none;">Explore the sea</a></button>
             </div>
 
             <div class="home_bg_part" style="width: 80%; overflow: hidden;">
@@ -104,17 +110,20 @@
                     <div class="col-md-6" style="position: relative;">
                         <img src="assets/images/home/payment_detail_image.png" alt="payment_detail_image"
                             class="overlay" />
-                        <p class="overlay-text"><a href="bank-details.html" style="color: white; text-decoration: none;">payment - BANK DETAILS</a></p>
+                        <p class="overlay-text"><a href="bank-details.html"
+                                style="color: white; text-decoration: none;">payment - BANK DETAILS</a></p>
                     </div>
                     <div class="col-md-3" id="home_discount_prices">
                         <h5>DISCOUNT PRICES</h5>
                         <p>One of the Lowest FEES among the MTI's
                             Comparison Table AMET City College
                             Discount Fees With Previous fee.</p>
-                        <button><a href="discount.html" style="color: white; text-decoration: none;">View all</a></button>
+                        <button><a href="discount.html" style="color: white; text-decoration: none;">View
+                                all</a></button>
                     </div>
                     <div class="col-md-3" id="home_package_course">
-                        <p><a href="package-course.html" style="color: white; text-decoration: none;">Package Courses</a></p>
+                        <p><a href="package-course.html" style="color: white; text-decoration: none;">Package
+                                Courses</a></p>
                     </div>
                 </div>
             </div>
@@ -125,7 +134,8 @@
             <div class="row">
                 <div class="col-md-6" style="position: relative;">
                     <img src="assets/images/home/payment_detail_image.png" alt="payment_detail_image" class="overlay" />
-                    <p class="overlay-text"><a href="bank-details.html" style="color: white; text-decoration: none;">payment - </br> BANK DETAILS</a></p>
+                    <p class="overlay-text"><a href="bank-details.html"
+                            style="color: white; text-decoration: none;">payment - </br> BANK DETAILS</a></p>
                 </div>
                 <div class="col-md-3" id="home_discount_prices1">
                     <h5>DISCOUNT PRICES</h5>
@@ -135,7 +145,8 @@
                     <button><a href="discount.html" style="color: white; text-decoration: none;">View all</a></button>
                 </div>
                 <div class="col-md-3" id="home_package_course1">
-                    <p><a href="package-course.html" style="color: white; text-decoration: none;">Package Courses</a></p>
+                    <p><a href="package-course.html" style="color: white; text-decoration: none;">Package Courses</a>
+                    </p>
                 </div>
             </div>
         </div>
@@ -326,12 +337,99 @@
                     excellence, we offer a diverse range of programs designed to meet DG Shipping requirements as well
                     as the evolving needs of our students and prepare them for
                     successful careers.</p>
-                <button class="btn custom-button">
+                <button class="btn custom-button" data-bs-toggle="modal" data-bs-target="#discountModal">
                     CLICK HERE FOR SPECIAL DISCOUNT
                     <span class="arrow-circle">&#10140;</span>
                 </button>
             </div>
         </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="discountModal" tabindex="-1" aria-labelledby="discountModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="discountModalLabel">Submit your contact details to get special
+                            discounts.</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Your form starts here -->
+                        <form id="discountForm">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email ID</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone">
+                            </div>
+                            <div class="mb-3">
+                                <label for="course" class="form-label">Course</label>
+                                <select class="form-select" id="course">
+                                    <option selected>Select a Course</option>
+                                    <option value="Automatic Radar Plotting Aids">Automatic Radar Plotting Aids</option>
+                                    <option value=" Basic Safety Training [ BST= EFA+FPFF+PST+PSSR ] "> Basic Safety
+                                        Training [ BST= EFA+FPFF+PST+PSSR ] </option>
+                                    <option value="Basic Training for Liquified Gas Tanker Cargo Operations(LGTF)">
+                                        Basic Training for Liquified Gas Tanker Cargo Operations(LGTF) </option>
+                                    <option value="Basic Training for Oil and Chemical Tanker Cargo Operations">Basic
+                                        Training for Oil and Chemical Tanker Cargo Operations</option>
+                                    <option value="Electronic Chart Display and Information Systems">Electronic Chart
+                                        Display and Information Systems</option>
+                                    <option value="Medical First Aid (MFA)">Medical First Aid (MFA)</option>
+                                    <option value="Medical Care">Medical Care</option>
+                                    <option value="Radar Observer Simulator">Radar Observer Simulator</option>
+                                    <option value="Radar and Navigation Simulator">Radar and Navigation Simulator
+                                    </option>
+                                    <option value="	Refresher Training for Medical First Aid"> Refresher Training for
+                                        Medical First Aid</option>
+                                    <option value="Refresher Training for Proficiency in RFPFF">Refresher Training for
+                                        Proficiency in RFPFF</option>
+                                    <option value="Refresher Training for Proficiency in PST">Refresher Training for
+                                        Proficiency in PST</option>
+                                    <option value="Second Mate (FG) Competency Course">Second Mate (FG) Competency
+                                        Course</option>
+                                    <option
+                                        value="Security Trng. for Seafarer with  Designated Security Duties - STSDSD">
+                                        Security Trng. for Seafarer with Designated Security Duties - STSDSD</option>
+                                    <option value="Vertical Integration Course For Trainers - VICT">Vertical Integration
+                                        Course For Trainers - VICT</option>
+                                </select>
+                            </div>
+                            <!-- Add more form fields as needed -->
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                        <!-- Your form ends here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Success Modal -->
+        <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="successModalLabel">Success</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Your form has been submitted successfully!
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
     <!-- Post sea courses section end -->
 
@@ -530,23 +628,60 @@
                 <form onsubmit="return register();">
                     <div class="row mb-3">
                         <div class="col-md-6">
-                            <label for="name" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                            <label for="name" class="form-label">First Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Your First Name" required>
                         </div>
+                        <div class="col-md-6">
+                            <label for="lastName" class="form-label">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" placeholder="Your Last Name" required>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
                         <div class="col-md-6">
                             <label for="email" class="form-label">Email</label>
                             <input type="email" class="form-control" id="email" placeholder="Your Email" required>
                         </div>
-                    </div>
-                    <div class="row mb-3 home-form">
                         <div class="col-md-6">
-                            <label for="subject" class="form-label">Subject</label>
-                            <textarea class="form-control" id="subject" rows="3" placeholder="Subject"
+                            <label for="course" class="form-label">Course</label>
+                            <select class="form-select" id="course">
+                                <option selected>Select a Course</option>
+                                <option value="Automatic Radar Plotting Aids">Automatic Radar Plotting Aids</option>
+                                <option value=" Basic Safety Training [ BST= EFA+FPFF+PST+PSSR ] "> Basic Safety
+                                    Training [ BST= EFA+FPFF+PST+PSSR ] </option>
+                                <option value="Basic Training for Liquified Gas Tanker Cargo Operations(LGTF)"> Basic
+                                    Training for Liquified Gas Tanker Cargo Operations(LGTF) </option>
+                                <option value="Basic Training for Oil and Chemical Tanker Cargo Operations">Basic
+                                    Training for Oil and Chemical Tanker Cargo Operations</option>
+                                <option value="Electronic Chart Display and Information Systems">Electronic Chart
+                                    Display and Information Systems</option>
+                                <option value="Medical First Aid (MFA)">Medical First Aid (MFA)</option>
+                                <option value="Medical Care">Medical Care</option>
+                                <option value="Radar Observer Simulator">Radar Observer Simulator</option>
+                                <option value="Radar and Navigation Simulator">Radar and Navigation Simulator</option>
+                                <option value="	Refresher Training for Medical First Aid"> Refresher Training for
+                                    Medical First Aid</option>
+                                <option value="Refresher Training for Proficiency in RFPFF">Refresher Training for
+                                    Proficiency in RFPFF</option>
+                                <option value="Refresher Training for Proficiency in PST">Refresher Training for
+                                    Proficiency in PST</option>
+                                <option value="Second Mate (FG) Competency Course">Second Mate (FG) Competency Course
+                                </option>
+                                <option value="Security Trng. for Seafarer with  Designated Security Duties - STSDSD">
+                                    Security Trng. for Seafarer with Designated Security Duties - STSDSD</option>
+                                <option value="Vertical Integration Course For Trainers - VICT">Vertical Integration
+                                    Course For Trainers - VICT</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="3" placeholder="Message..."
                                 required></textarea>
                         </div>
                         <div class="col-md-6">
-                            <label for="contact" class="form-label">Contact Number</label>
-                            <input type="tel" class="form-control" id="contact" placeholder="Your Contact Number"
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="Your Contact Number"
                                 required>
                         </div>
                     </div>
@@ -633,12 +768,12 @@
                             <div class="accordion-body">Maximum of three attempts.</div>
                         </div>
                     </div>
-                    <!-- <div class="accordion-item">
+                    <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-headingThree">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#flush-collapseThree" aria-expanded="false"
                                 aria-controls="flush-collapseThree">
-                                6. What is the attendance criteria for the courses? 
+                                6. What is the attendance criteria for the courses?
                             </button>
                         </h2>
                         <div id="flush-collapseThree" class="accordion-collapse collapse"
@@ -646,7 +781,7 @@
                             <div class="accordion-body"> 100% is required as per the DG Shipping </div>
                         </div>
                     </div>
-                    <div class="accordion-item">
+                    <!-- <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-headingThree">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#flush-collapseThree" aria-expanded="false"
@@ -783,11 +918,16 @@
                     <h5>Our Social Networks</h5>
                     <p>Be in touch with us in all Social Media Platforms</p>
                     <div class="social-icons">
-                        <a href="https://www.facebook.com/AMETCityCollege.PostSeaTraining" target="_blank"><i class="fab fa-facebook"></i></a>
-                        <a href="https://www.youtube.com/channel/UC04qpdcqGEaqoGfz1_TC4HQ" target="_blank"><i class="fab fa-youtube"></i></a>
-                        <a href="https://www.linkedin.com/feed/?midToken=AQHqRt6TyI68uw&midSig=2z48tNlQh-va41&trk=eml-email_network_conversations_01-footer_promo-2-footer_see_all&trkEmail=eml-email_network_conversations_01-footer_promo-2-footer_see_all-null-cmglyf~ky5fwppo~yc-null-neptune/feed" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://api.whatsapp.com/send/?phone=919176079666&text=Hai&type=phone_number&app_absent=0" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                        <a href="https://www.instagram.com/amet_city_college/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/AMETCityCollege.PostSeaTraining" target="_blank"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="https://www.youtube.com/channel/UC04qpdcqGEaqoGfz1_TC4HQ" target="_blank"><i
+                                class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/feed/?midToken=AQHqRt6TyI68uw&midSig=2z48tNlQh-va41&trk=eml-email_network_conversations_01-footer_promo-2-footer_see_all&trkEmail=eml-email_network_conversations_01-footer_promo-2-footer_see_all-null-cmglyf~ky5fwppo~yc-null-neptune/feed"
+                            target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://api.whatsapp.com/send/?phone=919176079666&text=Hai&type=phone_number&app_absent=0"
+                            target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/amet_city_college/" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
