@@ -338,6 +338,7 @@
         font-size: 16px;
     }
     
+    
 }
 
 
@@ -356,6 +357,10 @@
     .seat-availability .sub-course-head{
         width: 90vw;
     }
+
+    .about .about-img{
+        width: 90vw !important;
+    }
 }
 
 @media screen and (max-width: 350px) {
@@ -370,6 +375,10 @@
     .automaticradar .fee-detail > div{
         flex-direction: column;
         gap: 10px !important;
+    }
+
+    .about .about-img{
+        width: 90vw !important;
     }
 }
 
