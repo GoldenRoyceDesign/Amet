@@ -1,22 +1,16 @@
-
-function register(event) {
-    event.preventDefault(); // Prevent the form from submitting traditionally
-
+function register() {
     const form = document.querySelector('form');
-    const name = document.getElementById('name').value.trim();
-    const lastName = document.getElementById('lastName').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const phone = document.getElementById('phone').value.trim();
-    const course = document.getElementById('course').value.trim();
-    const message = document.getElementById('message').value.trim();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const contact = document.getElementById('contact').value;
+    const subject = document.getElementById('subject').value;
 
     function showModal(message, isSuccess = false) {
         const modal = document.getElementById("myModal");
         const modalMessage = document.getElementById("modalMessage");
         modalMessage.textContent = message;
-        modal.style.display = "flex"; // Use flex to center the modal
+        modal.style.display = "block";
         modalMessage.style.color = isSuccess ? "green" : "red";
-
         document.getElementById("closeModal").addEventListener("click", function () {
             modal.style.display = "none";
         });
@@ -27,7 +21,7 @@ function register(event) {
         return emailPattern.test(email);
     }
 
-    if (!name || !lastName || !email || !phone || !course || !message) {
+    if (!name || !email || !contact || !subject) {
         showModal("All fields are required.");
         return false;
     }
@@ -37,32 +31,26 @@ function register(event) {
         return false;
     }
 
-    const formData = { name, lastName, email, phone, course, message };
+    const formData = { name, email, contact, subject };
 
     fetch("home_page_form.php", {
         method: "POST",
         body: JSON.stringify(formData),
         headers: { "Content-Type": "application/json" }
     })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                showModal(data.success, true);
-                form.reset();
-            } else {
-                showModal(data.error);
-            }
-        })
-        .catch(error => {
-            console.error("Error:", error);
-            showModal("Error registering. Please try again later.");
-        });
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            showModal(data.success, true);
+            form.reset();
+        } else {
+            showModal(data.error);
+        }
+    })
+    .catch(error => {
+        console.error("Error:", error);
+        showModal("Error registering. Please try again later.");
+    });
 
-    return false; // Ensure the form doesn't reload the page
+    return false; // Prevent form from submitting traditionally
 }
-
-// Bind the `register` function to the form
-document.querySelector('form').addEventListener('submit', register);
-
-
-

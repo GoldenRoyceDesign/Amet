@@ -369,39 +369,6 @@
                                 <label for="phone" class="form-label">Phone Number</label>
                                 <input type="tel" class="form-control" id="phone">
                             </div>
-                            <div class="mb-3">
-                                <label for="course" class="form-label">Course</label>
-                                <select class="form-select" id="course">
-                                    <option selected>Select a Course</option>
-                                    <option value="Automatic Radar Plotting Aids">Automatic Radar Plotting Aids</option>
-                                    <option value=" Basic Safety Training [ BST= EFA+FPFF+PST+PSSR ] "> Basic Safety
-                                        Training [ BST= EFA+FPFF+PST+PSSR ] </option>
-                                    <option value="Basic Training for Liquified Gas Tanker Cargo Operations(LGTF)">
-                                        Basic Training for Liquified Gas Tanker Cargo Operations(LGTF) </option>
-                                    <option value="Basic Training for Oil and Chemical Tanker Cargo Operations">Basic
-                                        Training for Oil and Chemical Tanker Cargo Operations</option>
-                                    <option value="Electronic Chart Display and Information Systems">Electronic Chart
-                                        Display and Information Systems</option>
-                                    <option value="Medical First Aid (MFA)">Medical First Aid (MFA)</option>
-                                    <option value="Medical Care">Medical Care</option>
-                                    <option value="Radar Observer Simulator">Radar Observer Simulator</option>
-                                    <option value="Radar and Navigation Simulator">Radar and Navigation Simulator
-                                    </option>
-                                    <option value="	Refresher Training for Medical First Aid"> Refresher Training for
-                                        Medical First Aid</option>
-                                    <option value="Refresher Training for Proficiency in RFPFF">Refresher Training for
-                                        Proficiency in RFPFF</option>
-                                    <option value="Refresher Training for Proficiency in PST">Refresher Training for
-                                        Proficiency in PST</option>
-                                    <option value="Second Mate (FG) Competency Course">Second Mate (FG) Competency
-                                        Course</option>
-                                    <option
-                                        value="Security Trng. for Seafarer with  Designated Security Duties - STSDSD">
-                                        Security Trng. for Seafarer with Designated Security Duties - STSDSD</option>
-                                    <option value="Vertical Integration Course For Trainers - VICT">Vertical Integration
-                                        Course For Trainers - VICT</option>
-                                </select>
-                            </div>
                             <!-- Add more form fields as needed -->
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
@@ -410,8 +377,6 @@
                 </div>
             </div>
         </div>
-
-
         <!-- Success Modal -->
         <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
@@ -429,7 +394,6 @@
                 </div>
             </div>
         </div>
-
     </div>
     <!-- Post sea courses section end -->
 
@@ -625,78 +589,51 @@
         <div class="row">
             <div class="col-md-6 home-form">
                 <h2 class="text-center">How we can help you?</h2>
-                <form id="registrationForm">
+                <form onsubmit="return register();">
                     <div class="row mb-3">
                         <div class="col-md-6">
-                            <label for="name" class="form-label">First Name</label>
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Your First Name"
-                                required>
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Your First Name" required>
                         </div>
                         <div class="col-md-6">
                             <label for="lastName" class="form-label">Last Name</label>
-                            <input type="text" class="form-control" id="lastName" name="lastName"
-                                placeholder="Your Last Name" required>
+                            <input type="text" class="form-control" id="lastName" placeholder="Your Last Name" required>
                         </div>
                     </div>
                     <div class="row mb-3">
                         <div class="col-md-6">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Your Email"
-                                required>
+                            <input type="email" class="form-control" id="email" placeholder="Your Email" required>
                         </div>
                         <div class="col-md-6">
                             <label for="course" class="form-label">Course</label>
-                            <select class="form-select" id="course" name="course" required>
-                                <option value="" selected>Select a Course</option>
-                                <option value="Automatic Radar Plotting Aids">Automatic Radar Plotting Aids</option>
-                                <option value="Basic Safety Training [ BST= EFA+FPFF+PST+PSSR ]">Basic Safety Training [
-                                    BST= EFA+FPFF+PST+PSSR ]</option>
-                                <option value="Basic Training for Liquified Gas Tanker Cargo Operations(LGTF)">Basic
-                                    Training for Liquified Gas Tanker Cargo Operations(LGTF)</option>
-                                <option value="Basic Training for Oil and Chemical Tanker Cargo Operations">Basic
-                                    Training for Oil and Chemical Tanker Cargo Operations</option>
-                                <option value="Electronic Chart Display and Information Systems">Electronic Chart
-                                    Display and Information Systems</option>
-                                <option value="Medical First Aid (MFA)">Medical First Aid (MFA)</option>
-                                <option value="Medical Care">Medical Care</option>
-                                <option value="Radar Observer Simulator">Radar Observer Simulator</option>
-                                <option value="Radar and Navigation Simulator">Radar and Navigation Simulator</option>
-                                <option value="Refresher Training for Medical First Aid">Refresher Training for Medical
-                                    First Aid</option>
-                                <option value="Refresher Training for Proficiency in RFPFF">Refresher Training for
-                                    Proficiency in RFPFF</option>
-                                <option value="Refresher Training for Proficiency in PST">Refresher Training for
-                                    Proficiency in PST</option>
-                                <option value="Second Mate (FG) Competency Course">Second Mate (FG) Competency Course
-                                </option>
-                                <option value="Security Trng. for Seafarer with Designated Security Duties - STSDSD">
-                                    Security Trng. for Seafarer with Designated Security Duties - STSDSD</option>
-                                <option value="Vertical Integration Course For Trainers - VICT">Vertical Integration
-                                    Course For Trainers - VICT</option>
+                            <select class="form-select" id="course">
+                                <option selected>Select a Course</option>
+                                <option value="1">Course 1</option>
+                                <option value="2">Course 2</option>
+                                <option value="3">Course 3</option>
                             </select>
                         </div>
                     </div>
                     <div class="row mb-3">
                         <div class="col-md-6">
                             <label for="message" class="form-label">Message</label>
-                            <textarea class="form-control" id="message" name="message" rows="3" placeholder="Message..."
+                            <textarea class="form-control" id="message" rows="3" placeholder="Message..."
                                 required></textarea>
                         </div>
                         <div class="col-md-6">
                             <label for="phone" class="form-label">Phone Number</label>
-                            <input type="tel" class="form-control" id="phone" name="phone"
-                                placeholder="Your Contact Number" required>
+                            <input type="tel" class="form-control" id="phone" placeholder="Your Contact Number"
+                                required>
                         </div>
                     </div>
                     <button type="submit" class="btn">Submit</button>
                 </form>
-
             </div>
 
-            <!-- Modal Structure -->
-            <div id="myModal" style="display: none;">
-                <div>
-                    <span id="closeModal">&times;</span>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span id="closeModal" class="close">&times;</span>
                     <p id="modalMessage"></p>
                 </div>
             </div>

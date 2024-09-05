@@ -22,19 +22,15 @@ try {
         
         // Check if all required fields are present
         if (isset($requestBody['name']) && 
-            isset($requestBody['lastName']) &&
             isset($requestBody['email']) && 
-            isset($requestBody['phone']) && 
-            isset($requestBody['course']) &&
-            isset($requestBody['message'])) {
+            isset($requestBody['contact']) && 
+            isset($requestBody['subject'])) {
             
             // Extract data from the request body
             $name = $requestBody['name'];
-            $lastName = $requestBody['lastName'];
             $email = $requestBody['email'];
-            $phone = $requestBody['phone'];
-            $course = $requestBody['course'];
-            $message = $requestBody['message'];
+            $contact = $requestBody['contact'];
+            $subject = $requestBody['subject'];
 
             // Check if the email already exists in the database
             $checkQuery = "SELECT * FROM contact_form WHERE email = ?";
@@ -47,18 +43,17 @@ try {
                 echo json_encode(['error' => 'Email already exists in the database!']);
             } else {
                 // Prepare the INSERT statement
-                $query = "INSERT INTO contact_form (name, lastName, email, phone, course, message) VALUES (?, ?, ?, ?, ?, ?)";
+                $query = "INSERT INTO contact_form (name, email, contact, subject) VALUES (?, ?, ?, ?)";
                 $statement = $pdo->prepare($query);
 
                 // Bind the parameters and execute the statement
                 $statement->bindParam(1, $name);
-                $statement->bindParam(2, $lastName);
-                $statement->bindParam(3, $email);
-                $statement->bindParam(4, $phone);
-                $statement->bindParam(5, $course);
-                $statement->bindParam(6, $message);
+                $statement->bindParam(2, $email);
+                $statement->bindParam(3, $contact);
+                $statement->bindParam(4, $subject);
 
                 $statement->execute();
+                $lastInsertedId = $pdo->lastInsertId();
 
                 // Return a success message
                 echo json_encode(['success' => 'Registration Successful.']);
