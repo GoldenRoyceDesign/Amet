@@ -58,4 +58,5 @@ document.addEventListener('DOMContentLoaded', () => {
     videoModal.addEventListener('hide.bs.modal', function () {
         modalVideo.src = ''; // Clear the src to stop the video
     });
+
 });

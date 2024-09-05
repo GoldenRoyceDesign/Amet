@@ -816,7 +816,7 @@ textarea {
     box-sizing: border-box;
     width: 100%;
     height: 30px;
-    background: linear-gradient(to right, rgb(46, 49, 146, 0.9) 40%, transparent);;
+    background: linear-gradient(to right, rgb(46, 49, 146, 0.9) 40%, transparent);
 }
 
 
@@ -955,7 +955,17 @@ textarea {
     text-align: left;
 }
 
+/* Bank-details page style */
 
+.bank-details{
+    box-sizing: border-box;
+    background: linear-gradient(to right, #080B66 0%, #1116CC 49%, #080B66 100%, transparent);
+    padding: 10px;
+}
+
+.bank-details h2{
+    color: white;
+}
 
 
 /* Footer section style */

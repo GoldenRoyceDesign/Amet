@@ -736,7 +736,9 @@
                                             </select>
                                         </td>
                                         <td data-label="Fee">Rs.4000</td>
-                                        <td data-label="Apply Now"><button class="btn">View details</button></td>
+                                        <td data-label="Apply Now"><a
+                                            href="courses/advanced-modular-courses/medical-first-aid-mfa.html"><button
+                                                class="btn">View details</button></a></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -764,7 +766,9 @@
                                             </select>
                                         </td>
                                         <td data-label="Fee">Rs.3900</td>
-                                        <td data-label="Apply Now"><button class="btn">View details</button></td>
+                                        <td data-label="Apply Now"><a
+                                            href="courses/advanced-modular-courses/ship-security-officer-sso.html"><button
+                                                class="btn">View details</button></a></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -791,7 +795,9 @@
                                             </select>
                                         </td>
                                         <td data-label="Fee">Rs.11900</td>
-                                        <td data-label="Apply Now"><button class="btn">View details</button></td>
+                                        <td data-label="Apply Now"><a
+                                            href="courses/advanced-modular-courses/vertical-integration-course-for-trainers-vict.html"><button
+                                                class="btn">View details</button></a></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -824,7 +830,9 @@
                                             </select>
                                         </td>
                                         <td data-label="Fee">Rs.2500</td>
-                                        <td data-label="Apply Now"><button class="btn">View details</button></td>
+                                        <td data-label="Apply Now"><a
+                                            href="courses/refresher-courses/refresher-training-for-proficiency-in-fpff.html"><button
+                                                class="btn">View details</button></a></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -854,7 +862,9 @@
                                             </select>
                                         </td>
                                         <td data-label="Fee">Rs.2500</td>
-                                        <td data-label="Apply Now"><button class="btn">View details</button></td>
+                                        <td data-label="Apply Now"><a
+                                            href="courses/refresher-courses/refresher-training-for-proficiency-in-pst.html"><button
+                                                class="btn">View details</button></a></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -890,7 +900,9 @@
                                             </select>
                                         </td>
                                         <td data-label="Fee">Rs.8900</td>
-                                        <td data-label="Apply Now"><button class="btn">View details</button></td>
+                                        <td data-label="Apply Now"><a
+                                            href="courses/refresher-courses/revalidation-training-for-all-engineers-eto-officers-rut-reo.html"><button
+                                                class="btn">View details</button></a></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -997,6 +1009,28 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/home_page_form.js"></script>
+    <script>// Get the query parameter from the URL
+        const params = new URLSearchParams(window.location.search);
+        const tabParam = params.get('tab');
+    
+        // Map tabParam to the appropriate button ID
+        const tabMap = {
+            'tab1': 'v-pills-tab1-tab',
+            'tab2': 'v-pills-tab2-tab',
+            'tab3': 'v-pills-tab3-tab',
+            'tab4': 'v-pills-tab4-tab',
+            'tab5': 'v-pills-tab5-tab',
+            'tab6': 'v-pills-tab6-tab',
+            'tab7': 'v-pills-tab7-tab'
+        };
+    
+        // Activate the correct tab if the parameter is valid
+        if (tabParam && tabMap[tabParam]) {
+            const tabButton = document.getElementById(tabMap[tabParam]);
+            if (tabButton) {
+                tabButton.click(); // Programmatically click the tab button to activate it
+            }
+        }</script>
 </body>
 
 </html>
