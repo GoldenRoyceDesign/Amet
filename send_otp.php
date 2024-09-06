@@ -7,15 +7,13 @@ use Twilio\Rest\Client;
 $twilioAccountSid = getenv('TWILIO_ACCOUNT_SID');
 $twilioAuthToken = getenv('TWILIO_AUTH_TOKEN');
 
-if (!$twilioAccountSid || !$twilioAuthToken) {
-    die('Twilio credentials not set.');
-}
-
 $twilio = new Client($twilioAccountSid, $twilioAuthToken);
 
-// Sending OTP
+// Example of sending an OTP
 $otp = rand(100000, 999999); // Generate a 6-digit OTP
-$to = $_POST['phone']; // Assuming the phone number comes from form input
+
+// Assume the phone number comes from form input
+$to = $_POST['phone']; // Replace with actual form input
 $from = '+0987654321'; // Replace with your Twilio phone number
 
 try {
