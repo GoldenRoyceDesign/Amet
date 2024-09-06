@@ -1,32 +1,32 @@
 <?php
-require 'vendor/autoload.php'; // If you use Composer
+require_once 'vendor/autoload.php';
+
 use Twilio\Rest\Client;
 
-session_start();
+// Initialize Twilio credentials from environment variables
+$twilioAccountSid = getenv('TWILIO_ACCOUNT_SID');
+$twilioAuthToken = getenv('TWILIO_AUTH_TOKEN');
 
-$accountSid = 'AC1f3b3d32d7b8eb87ee5f600c45354898'; // Replace with your Twilio Account SID
-$authToken = '3210e802f14d17b74ac3b0f5746cb3d7';   // Replace with your Twilio Auth Token
-$twilioPhoneNumber = '8903558873'; // Replace with your Twilio phone number
+$twilio = new Client($twilioAccountSid, $twilioAuthToken);
 
-$client = new Client($accountSid, $authToken);
+// Example of sending an OTP
+$otp = rand(100000, 999999); // Generate a 6-digit OTP
 
-$phoneNumber = $_POST['phone']; // Phone number to send OTP to
+// Assume the phone number comes from form input
+$to = $_POST['phone']; // Replace with actual form input
+$from = '+0987654321'; // Replace with your Twilio phone number
 
-// Generate a random OTP code
-$otpCode = rand(100000, 999999);
+try {
+    $message = $twilio->messages->create(
+        $to,
+        array(
+            'from' => $from,
+            'body' => "Your OTP code is: $otp"
+        )
+    );
 
-// Save OTP code and phone number to the session
-$_SESSION['otp'] = $otpCode;
-$_SESSION['phone_number'] = $phoneNumber;
-
-// Send the OTP SMS
-$client->messages->create(
-    $phoneNumber, // The phone number to send the OTP to
-    [
-        'from' => $twilioPhoneNumber,
-        'body' => "Your OTP code is: $otpCode"
-    ]
-);
-
-echo json_encode(['success' => 'OTP sent successfully']);
+    echo "OTP sent successfully.";
+} catch (Exception $e) {
+    echo "Error: " . $e->getMessage();
+}
 ?>
