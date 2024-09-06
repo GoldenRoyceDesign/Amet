@@ -15,14 +15,14 @@ try {
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $requestBody = json_decode(file_get_contents('php://input'), true);
 
-        if (isset($requestBody['name']) && 
+        if (isset($requestBody['firstName']) && 
             isset($requestBody['lastName']) && 
             isset($requestBody['email']) && 
             isset($requestBody['phone']) && 
             isset($requestBody['course']) && 
             isset($requestBody['message'])) {
             
-            $name = $requestBody['name'];
+            $firstName = $requestBody['firstName'];
             $lastName = $requestBody['lastName'];
             $email = $requestBody['email'];
             $phone = $requestBody['phone'];
@@ -40,7 +40,7 @@ try {
                 $query = "INSERT INTO contact_form (name, lastName, email, phone, course, message) VALUES (?, ?, ?, ?, ?, ?)";
                 $statement = $pdo->prepare($query);
 
-                $statement->bindParam(1, $name);
+                $statement->bindParam(1, $firstName);
                 $statement->bindParam(2, $lastName);
                 $statement->bindParam(3, $email);
                 $statement->bindParam(4, $phone);

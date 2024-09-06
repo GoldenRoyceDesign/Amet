@@ -949,6 +949,38 @@ textarea {
     background-color: #f2f2f2; /* White for even rows */
 }
 
+/* Discount page style */
+.seat-availability-discount .tables th,
+.tables td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+.seat-availability-discount{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  
+}
+
+.seat-availability-discount .tables thead th {
+    background: #22C9CF;
+    color: white;
+    font-weight: bold;
+    text-align: left;
+}
+
+.seat-availability-discount .tables tbody tr:nth-child(odd) {
+    background-color: #ffffff; /* Light gray for odd rows */
+}
+
+.seat-availability-discount .tables tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* White for even rows */
+}
+
 
 .automaticradar .marine-courses{
     color: #2E3192;
@@ -1065,6 +1097,47 @@ textarea {
 
 .home-page-contact .close:hover,
 .home-page-contact .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.contactUs .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.contactUs .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    height: auto;
+    position: relative;
+}
+
+/* Close button styles */
+.contactUs .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+.contactUs .close:hover,
+.contactUs .close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;

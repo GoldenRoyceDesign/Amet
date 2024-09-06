@@ -16,20 +16,16 @@ try {
         $requestBody = json_decode(file_get_contents('php://input'), true);
 
         if (isset($requestBody['name']) && 
-            isset($requestBody['lastName']) && 
             isset($requestBody['email']) && 
             isset($requestBody['phone']) && 
-            isset($requestBody['course']) && 
-            isset($requestBody['message'])) {
+            isset($requestBody['course'])) {
             
             $name = $requestBody['name'];
-            $lastName = $requestBody['lastName'];
             $email = $requestBody['email'];
             $phone = $requestBody['phone'];
             $course = $requestBody['course'];
-            $message = $requestBody['message'];
 
-            $checkQuery = "SELECT * FROM contact_form WHERE email = ?";
+            $checkQuery = "SELECT * FROM discount_form WHERE email = ?";
             $checkStatement = $pdo->prepare($checkQuery);
             $checkStatement->execute([$email]);
             $existingUser = $checkStatement->fetch();
@@ -37,15 +33,13 @@ try {
             if ($existingUser) {
                 echo json_encode(['error' => 'Email already exists in the database!']);
             } else {
-                $query = "INSERT INTO contact_form (name, lastName, email, phone, course, message) VALUES (?, ?, ?, ?, ?, ?)";
+                $query = "INSERT INTO discount_form (name, email, phone, course) VALUES (?, ?, ?, ?)";
                 $statement = $pdo->prepare($query);
 
                 $statement->bindParam(1, $name);
-                $statement->bindParam(2, $lastName);
-                $statement->bindParam(3, $email);
-                $statement->bindParam(4, $phone);
-                $statement->bindParam(5, $course);
-                $statement->bindParam(6, $message);
+                $statement->bindParam(2, $email);
+                $statement->bindParam(3, $phone);
+                $statement->bindParam(4, $course);
 
                 $statement->execute();
                 echo json_encode(['success' => 'Registration Successful.']);

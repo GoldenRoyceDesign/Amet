@@ -62,20 +62,20 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-document.getElementById('discountForm').addEventListener('submit', function (event) {
-    event.preventDefault(); // Prevent the default form submission
+// document.getElementById('discountForm').addEventListener('submit', function (event) {
+//     event.preventDefault(); // Prevent the default form submission
 
-    // Simulate form processing logic (e.g., an AJAX request)
-    setTimeout(function () {
-        // Close the discount modal
-        var discountModal = bootstrap.Modal.getInstance(document.getElementById('discountModal'));
-        discountModal.hide();
+//     // Simulate form processing logic (e.g., an AJAX request)
+//     setTimeout(function () {
+//         // Close the discount modal
+//         var discountModal = bootstrap.Modal.getInstance(document.getElementById('discountModal'));
+//         discountModal.hide();
 
-        // Reset the form fields
-        document.getElementById('discountForm').reset();
+//         // Reset the form fields
+//         document.getElementById('discountForm').reset();
 
-        // Show the success modal
-        var successModal = new bootstrap.Modal(document.getElementById('successModal'));
-        successModal.show();
-    }, 500); // Simulated delay for form processing
-});
+//         // Show the success modal
+//         var successModal = new bootstrap.Modal(document.getElementById('successModal'));
+//         successModal.show();
+//     }, 500); // Simulated delay for form processing
+// });
