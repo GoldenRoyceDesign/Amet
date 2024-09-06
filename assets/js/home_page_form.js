@@ -8,7 +8,6 @@ function register(event) {
     const phone = form.querySelector('input[name="phone"]').value;
     const course = form.querySelector('select[name="course"]').value;
     const message = form.querySelector('textarea[name="message"]').value;
-    const otp = form.querySelector('input[name="otp"]').value;
 
     // Function to show modal with a message
     function showModal(message, isSuccess = false) {
@@ -39,7 +38,7 @@ function register(event) {
     }
 
     // Validate input fields
-    if (!name || !lastName || !email || !phone || !course || !message || !otp) {
+    if (!name || !lastName || !email || !phone || !course || !message) {
         showModal("All fields are required.");
         return;
     }
@@ -50,10 +49,35 @@ function register(event) {
         return;
     }
 
-    // Verify OTP
+    // Send OTP to the user's email
+    fetch("send_otp.php", {
+        method: "POST",
+        body: JSON.stringify({ email: email }),
+        headers: {
+            "Content-Type": "application/json"
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            showModal('OTP sent successfully. Please check your email.', true);
+            document.getElementById('otpSection').style.display = 'block'; // Show OTP input
+        } else {
+            showModal(data.error);
+        }
+    })
+    .catch(error => {
+        console.error("Error:", error);
+        showModal("Error sending OTP. Please try again later.");
+    });
+}
+
+function verifyOtp() {
+    const enteredOtp = document.getElementById('otp').value;
+
     fetch("verify_otp.php", {
         method: "POST",
-        body: JSON.stringify({ otp: otp }),
+        body: JSON.stringify({ otp: enteredOtp }),
         headers: {
             "Content-Type": "application/json"
         }
@@ -62,19 +86,25 @@ function register(event) {
     .then(data => {
         if (data.success) {
             // Prepare form data for sending to the server
-            const formData = {
-                name: name,
-                lastName: lastName,
-                email: email,
-                phone: phone,
-                course: course,
-                message: message
-            };
+            const form = document.getElementById('registrationForm');
+            const name = form.querySelector('input[name="name"]').value;
+            const lastName = form.querySelector('input[name="lastName"]').value;
+            const email = form.querySelector('input[name="email"]').value;
+            const phone = form.querySelector('input[name="phone"]').value;
+            const course = form.querySelector('select[name="course"]').value;
+            const message = form.querySelector('textarea[name="message"]').value;
 
             // Send the form data to the server using fetch
             fetch("home_page_form.php", {
                 method: "POST",
-                body: JSON.stringify(formData),
+                body: JSON.stringify({
+                    name: name,
+                    lastName: lastName,
+                    email: email,
+                    phone: phone,
+                    course: course,
+                    message: message
+                }),
                 headers: {
                     "Content-Type": "application/json"
                 }
@@ -92,8 +122,10 @@ function register(event) {
                 console.error("Error:", error);
                 showModal("Error registering. Please try again later.");
             });
+
+            document.getElementById('otpSection').style.display = 'none'; // Hide OTP input
         } else {
-            showModal(data.error); // Show OTP error message
+            showModal(data.error);
         }
     })
     .catch(error => {
@@ -101,31 +133,3 @@ function register(event) {
         showModal("Error verifying OTP. Please try again later.");
     });
 }
-
-// Function to handle OTP sending
-function sendOtp() {
-    const phoneInput = document.querySelector('input[name="phone"]').value;
-
-    fetch("send_otp.php", {
-        method: "POST",
-        body: JSON.stringify({ phone: phoneInput }),
-        headers: {
-            "Content-Type": "application/json"
-        }
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            showModal("OTP sent to your phone number. Please enter it to proceed.", true);
-        } else {
-            showModal(data.error);
-        }
-    })
-    .catch(error => {
-        console.error("Error:", error);
-        showModal("Error sending OTP. Please try again later.");
-    });
-}
-
-// Add an event listener to send OTP when phone input loses focus or another appropriate event
-document.querySelector('input[name="phone"]').addEventListener('blur', sendOtp);

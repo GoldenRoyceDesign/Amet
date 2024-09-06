@@ -167,14 +167,16 @@
                                 <input type="tel" class="form-control" id="phone" name="phone" required>
                             </div>
                         </div>
-                        <div class="row mb-3">
-                            <div class="col-md-6">
-                                <label for="otp" class="form-label">OTP</label>
-                                <input type="text" class="form-control" id="otp" name="otp" required>
-                            </div>
-                        </div>
                         <button type="submit" class="btn">Submit</button>
                     </form>
+
+
+                    <!-- OTP Section -->
+                    <div id="otpSection" style="display: none;">
+                        <label for="otp" class="form-label">Enter OTP</label>
+                        <input type="text" class="form-control" id="otp" name="otp" required>
+                        <button type="button" onclick="verifyOtp()">Verify OTP</button>
+                    </div>
                 </div>
             </div>
             <div id="myModal" class="modal">
