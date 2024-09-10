@@ -62,20 +62,24 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// document.getElementById('discountForm').addEventListener('submit', function (event) {
-//     event.preventDefault(); // Prevent the default form submission
+// document.getElementById('searchCoursesInput').addEventListener('keyup', function() {
+//     var filter = this.value.toUpperCase();
+//     var dropdownItems = document.querySelectorAll('#coursesDropdownMenu .dropdown-item');
 
-//     // Simulate form processing logic (e.g., an AJAX request)
-//     setTimeout(function () {
-//         // Close the discount modal
-//         var discountModal = bootstrap.Modal.getInstance(document.getElementById('discountModal'));
-//         discountModal.hide();
-
-//         // Reset the form fields
-//         document.getElementById('discountForm').reset();
-
-//         // Show the success modal
-//         var successModal = new bootstrap.Modal(document.getElementById('successModal'));
-//         successModal.show();
-//     }, 500); // Simulated delay for form processing
+//     dropdownItems.forEach(function(item) {
+//         var text = item.textContent || item.innerText;
+//         item.style.display = text.toUpperCase().indexOf(filter) > -1 ? '' : 'none';
+//     });
 // });
+
+
+document.getElementById('searchForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission behavior
+    var searchValue = document.getElementById('searchInput').value.trim();
+    if (searchValue) {
+      // Redirect to search results page with query parameter
+      window.location.href = `search.html?query=${encodeURIComponent(searchValue)}`;
+    }
+  });
+
+

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet">
+    <title>AMET City College - Search Results</title>
+
+    <style>
+        body {
+            background-color: #f4f4f4;
+        }
+
+        .search-container {
+            margin-top: 30px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-title {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .card-text {
+            color: #555;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            border-radius: 5px;
+        }
+
+        .no-results {
+            font-size: 1.25rem;
+            color: #666;
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header section start -->
+    <header>
+        <nav class="navbar navbar-expand-lg p-3" style="position: sticky;">
+            <div class="container-fluid">
+                <!-- Left-side logo -->
+                <a class="navbar-brand" href="/">
+                    <img src="assets/images/header/amet_logo.png" alt="Logo" width="200" height="50">
+                </a>
+
+                <!-- Toggler/collapsibe Button (for mobile view) -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+                    style='border: none;'>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Right-side navigation links -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav gap-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">HOME</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                ABOUT
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                                <li><a class="dropdown-item" href="/about.html">ABOUT US</a></li>
+                                <li><a class="dropdown-item" href="/team.html">OUR TEAM</a></li>
+                                <li><a class="dropdown-item" href="/timeline.html">TIMELINE OF ACC</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                COURSES
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
+                                <li><a class="dropdown-item" href="/courses.html?tab=tab1">NAVIGATION SIMULATORS
+                                        COURSES</a></li>
+                                <li><a class="dropdown-item" href="/courses.html?tab=tab2">BASIC SAFETY TRAINING
+                                        COURSES</a></li>
+                                <li><a class="dropdown-item" href="/courses.html?tab=tab3">BASIC MODULAR COURSES</a>
+                                </li>
+                                <li><a class="dropdown-item" href="/courses.html?tab=tab4">COMPETENCY COURSES</a></li>
+                                <li><a class="dropdown-item" href="/courses.html?tab=tab5">ADVANCED MODULAR COURSES</a>
+                                </li>
+                                <li><a class="dropdown-item" href="/courses.html?tab=tab6">REFRESHER COURSES</a></li>
+                                <li><a class="dropdown-item" href="/courses.html?tab=tab7">PACKAGE COURSES</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/gallery.html">GALLERY</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/faq.html">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact.html">CONTACT US</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.ametuniv.ac.in/">PRE - SEA COURSES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                                href="https://www.ametuniv.ac.in/BCA-Greek-Institute-Maritime-Education.html">BCA GREEK
+                                INSTITUTE OF
+                                MARITIME EDUCATION</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Header section end -->
+
+    <div class="container search-container">
+        <h2 class="mb-4">Search Results</h2>
+
+        <div id="searchResultsContainer">
+            <!-- Search results or message will be dynamically inserted here -->
+        </div>
+    </div>
+
+
+
+
+    <!-- Footer Section start -->
+    <footer class="footer">
+        <div class="container p-0 m-0">
+            <div class="row">
+                <!-- Map Column -->
+                <div class="col-md-3 mb-4">
+                    <h5>Our Location</h5>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62171.77643805455!2d80.19815!3d13.115902000000002!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526fba5be15e61%3A0xa53e774c9e6a641!2sAMET%20City%20College!5e0!3m2!1sen!2sin!4v1724925072163!5m2!1sen!2sin"
+                        width="100%" height="190" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+
+                <!-- Address Column -->
+                <div class="col-md-3 mb-4">
+                    <h5>AMET City College</h5>
+                    <p>R.R. Tower, 61/54,
+                        Jawaharlal Nehru Inner Ring Road,
+                        (200 feet Road), Sastha Nagar,
+                        Villivakkam, chennai - 600 049
+                        TamilNadu, India
+                    </p>
+                    <p><span style="font-weight: bold;">Landline:</span> +91-91760-44766<br><span
+                            style="font-weight: bold;">Mobile:</span> 9176079666<br><span
+                            style="font-weight: bold;">Email:</span> ametcitycollege@gmail.com</p>
+                </div>
+
+                <!-- Useful Links Column -->
+                <div class="col-md-2 mb-4">
+                    <h5>Useful Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="/courses.html">Courses</a></li>
+                        <li><a href="/contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Payment & Policies Column -->
+                <div class="col-md-2 mb-4">
+                    <h5>Payment and Policies</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="refund-policy.html">Refund Policy and Payment</a></li>
+                        <li><a href="#">Terms and Conditions</a></li>
+                        <li><a href="privacy-policy.html">Privacy policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media Column -->
+                <div class="col-md-2 mb-4">
+                    <h5>Our Social Networks</h5>
+                    <p>Be in touch with us in all Social Media Platforms</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/AMETCityCollege.PostSeaTraining" target="_blank"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="https://www.youtube.com/channel/UC04qpdcqGEaqoGfz1_TC4HQ" target="_blank"><i
+                                class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/feed/?midToken=AQHqRt6TyI68uw&midSig=2z48tNlQh-va41&trk=eml-email_network_conversations_01-footer_promo-2-footer_see_all&trkEmail=eml-email_network_conversations_01-footer_promo-2-footer_see_all-null-cmglyf~ky5fwppo~yc-null-neptune/feed"
+                            target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://api.whatsapp.com/send/?phone=919176079666&text=Hai&type=phone_number&app_absent=0"
+                            target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/amet_city_college/" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Bottom Row -->
+            <div class="footer-bottom">
+                © Copyright<span style="color: black; font-weight: 600;"> Amet City College.</span> All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap and Font Awesome Scripts -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/home_page_form.js"></script>
+    <!-- JavaScript for Handling Search Results -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var params = new URLSearchParams(window.location.search);
+            var query = params.get("query").toLowerCase();
+
+            // Define the list of courses
+            var courses = [
+                {
+                    name: "Automatic Radar Plotting Aids - ARPA Course (2122)",
+                    duration: "5 Days",
+                    fee: "Rs.7900",
+                    url: "courses/navigation-simulators-courses/automatic-radar-plotting-aids-arpa.html"
+                },
+
+                {
+                    name: "Electronic Chart Display And Information Systems - ECDIS Course (2123)",
+                    duration: "6 Days",
+                    fee: "Rs.11900",
+                    url: "courses/navigation-simulators-courses/electronic-chart-display-and-information-systems-ecdis.html"
+                },
+
+                {
+                    name: "High Voltage Safety And Switch Gear– Operational Level Course",
+                    duration: "1 Day",
+                    fee: "Rs.3500",
+                    url: "courses/navigation-simulators-courses/high-voltage-safety-and-switch-gear–operational-level-course.html"
+                },
+
+                {
+                    name: "Radar And Navigation Simulator - RANSCO Course (2221)",
+                    duration: "6 Days",
+                    fee: "Rs.8900",
+                    url: "courses/navigation-simulators-courses/radar-and-navigation-simulator-ransco.html"
+                },
+
+                {
+                    name: "Radar Observer Simulator - ROSC Course (2121)",
+                    duration: "10 Days",
+                    fee: "Rs.9900",
+                    url: "courses/navigation-simulators-courses/radar-observer-simulator-rosc.html"
+                },
+
+                {
+                    name: "Crowd Management, Passenger Safety And Safety Training Course (PSF)",
+                    duration: "3 Days",
+                    fee: "Rs.3900",
+                    url: "courses/basic-safety-training-courses/crowd-management-passenger-safety-safety-training.html"
+                },
+                {
+                    name: "Security Training For Seafarer With Designated Security Duties Course (STSDSD)",
+                    duration: "3 Days",
+                    fee: "Rs.3000",
+                    url: "courses/basic-safety-training-courses/security-training-for-seafarer-with-designated-security-duties-stsdsd.html"
+                },
+                {
+                    name: "STCW Basic Safety Training Course (BST= EFA+FPFF+PST+PSSR)",
+                    duration: "12 days",
+                    fee: "Rs.12000",
+                    url: "courses/basic-safety-training-courses/stcw-basic-safety-training-bst-efa-fpff-pst-pssr.html"
+                },
+                // Add more course objects here
+            ];
+
+            var searchResultsContainer = document.getElementById('searchResultsContainer');
+            var foundResults = false;
+            var resultsHTML = '';
+
+            // Search and display results
+            courses.forEach(function (course) {
+                if (course.name.toLowerCase().includes(query)) {
+                    foundResults = true;
+                    resultsHTML += `
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title">${course.name}</h5>
+                                <p class="card-text">Duration: ${course.duration}</p>
+                                <p class="card-text">Fee: ${course.fee}</p>
+                                <a href="${course.url}" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                    `;
+                }
+            });
+
+            // Display results or no results message
+            if (foundResults) {
+                searchResultsContainer.innerHTML = resultsHTML;
+            } else {
+                searchResultsContainer.innerHTML = `<p class="no-results">No courses found for "${query}".</p>`;
+            }
+        });
+    </script>
+</body>
+
+</html>
