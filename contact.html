@@ -26,7 +26,7 @@
             <div class="container-fluid">
                 <!-- Left-side logo -->
                 <a class="navbar-brand" href="/">
-                    <img src="assets/images/header/amet_logo.png" alt="Logo" width="200" height="50">
+                    <img src="assets/images/header/amet_logo.png" alt="Logo" width="180" height="50">
                 </a>
 
                 <!-- Toggler/collapsibe Button (for mobile view) -->
@@ -107,7 +107,7 @@
                 <div class="form-section w-100">
                     <h2 style="text-align: left; color: white;">CONTACT US</h2>
                     <p>Please fill out the required information to continue your registration</p>
-                    <form id="registrationForm" onsubmit="register(event);">
+                    <form id="registrationForm">
                         <div class="row mb-3">
                             <div class="col-md-6">
                                 <label for="name" class="form-label">First Name</label>
@@ -125,8 +125,8 @@
                             </div>
                             <div class="col-md-6">
                                 <label for="course" class="form-label">Course</label>
-                                <select class="form-select" id="course" name="course">
-                                    <option selected>Select a Course</option>
+                                <select class="form-select" id="course" name="course" required>
+                                    <option value="" selected disabled>Select a Course</option>
                                     <option value="Automatic Radar Plotting Aids">Automatic Radar Plotting Aids</option>
                                     <option value="Basic Safety Training [ BST= EFA+FPFF+PST+PSSR ]">Basic Safety
                                         Training [ BST= EFA+FPFF+PST+PSSR ]</option>
@@ -164,19 +164,12 @@
                             </div>
                             <div class="col-md-6">
                                 <label for="phone" class="form-label">Phone Number</label>
-                                <input type="tel" class="form-control" id="phone" name="phone" required>
+                                <input type="tel" class="form-control" id="phone" name="phone" pattern="[0-9]{10}" required>
                             </div>
                         </div>
                         <button type="submit" class="btn">Submit</button>
                     </form>
 
-
-                    <!-- OTP Section -->
-                    <div id="otpSection" style="display: none;">
-                        <label for="otp" class="form-label">Enter OTP</label>
-                        <input type="text" class="form-control" id="otp" name="otp" required>
-                        <button type="button" onclick="verifyOtp()">Verify OTP</button>
-                    </div>
                 </div>
             </div>
             <div id="myModal" class="modal">

@@ -26,7 +26,7 @@
             <div class="container-fluid">
                 <!-- Left-side logo -->
                 <a class="navbar-brand" href="/">
-                    <img src="assets/images/header/amet_logo.png" alt="Logo" width="200" height="50">
+                    <img src="assets/images/header/amet_logo.png" alt="Logo" width="180" height="50">
                 </a>
 
                 <!-- Toggler/collapsibe Button (for mobile view) -->
@@ -102,6 +102,7 @@
         <div class="homeSection">
             <div>
                 <h1>Welcome to AMET City College</h1>
+                <h4 style="color: white;">Post Sea Training Centre</h4>
                 <button><a href="courses.html" style="color: white; text-decoration: none;">Explore the sea</a></button>
             </div>
 
@@ -242,9 +243,10 @@
                         <!-- Image with Blue Linear Gradient at the Bottom -->
                         <div
                             class="col-md-6 d-flex flex-column align-items-center justify-content-center mb-5 position-relative feature-mb-view">
-                            <img src="assets/images/home/feature_image.png" alt="feature_image" class="img-fluid" />
+                            <img src="assets/images/home/feature_image_secondmate.png" alt="feature_image" class="img-fluid" />
                             <div class="gradient-overlay"></div>
-                            <p class="overlay-text">Range Safety Course - Details</p>
+                            <a href="/courses.html?tab=tab4"><p class="overlay-text">Second Mate (FG) Competency
+                                courses - Details</p></a>
                         </div>
 
                         <!-- Important Features Section -->
@@ -260,18 +262,18 @@
                                     <div
                                         class="d-flex justify-content-center align-items-center feature_course_mb_view">
                                         <!-- Additional Images with Gradient Overlays and Text -->
-                                        <div class="position-relative">
+                                        <!-- <div class="position-relative">
                                             <img src="assets/images/home/feature_image_secondmate.png"
                                                 alt="feature_image_secondmate" class="img-fluid" />
                                             <div class="gradient-overlay"></div>
                                             <p class="overlay-text">Second Mate (FG) Competency
                                                 courses - Details</p>
-                                        </div>
+                                        </div> -->
                                         <div class="position-relative ms-3">
                                             <img src="assets/images/home/feature_image_radar.png"
-                                                alt="feature_image_radar" class="img-fluid" />
+                                                alt="feature_image_radar" class="img-fluid" style="border-radius: 25px;"/>
                                             <div class="gradient-overlay"></div>
-                                            <p class="overlay-text">Navigation Simulator Course - Details</p>
+                                            <a href="/courses.html?tab=tab1"><p class="overlay-text">Navigation Simulator Course - Details</p></a>
                                         </div>
                                     </div>
                                 </div>
@@ -334,7 +336,8 @@
                 <p class="mt-4">AMET City College, a unit of AMET University, embarked in to the area of Post Sea
                     Training to enrich
                     the knowledge and expertise of seafarers and Maritime Professionals.</p>
-                <p style="color: #726F6F;">AMET City College is a dynamic and innovative institution committed to
+                <p style="color: #726F6F;">AMET City College Post Sea Training Centre is a dynamic and innovative
+                    institution committed to
                     providing high-quality
                     education and fostering a stimulating learning environment. With a strong focus on academic
                     excellence, we offer a diverse range of programs designed to meet DG Shipping requirements as well
@@ -361,7 +364,7 @@
                         <!-- Message Display Area -->
                         <div id="formMessage" class="mb-3"></div>
                         <!-- Your form starts here -->
-                        <form id="discountForm" onsubmit="register(event);">
+                        <form id="discountForm" onsubmit="register(event)">
                             <div class="mb-3">
                                 <label for="name" class="form-label">Full Name</label>
                                 <input type="text" class="form-control" id="name" name="name" required>
@@ -415,24 +418,7 @@
             </div>
         </div>
 
-        <!-- Success Modal
-        <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="successModalLabel">Success</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        Your form has been submitted successfully!
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
+        
 
     </div>
     <!-- Post sea courses section end -->
@@ -629,7 +615,7 @@
         <div class="row">
             <div class="col-md-6 home-form">
                 <h2 class="text-center">How we can help you?</h2>
-                <form id="registrationForm" onsubmit="register(event);">
+                <form id="registrationForm">
                     <div class="row mb-3">
                         <div class="col-md-6">
                             <label for="name" class="form-label">First Name</label>
@@ -650,8 +636,8 @@
                         </div>
                         <div class="col-md-6">
                             <label for="course" class="form-label">Course</label>
-                            <select class="form-control" id="course" name="course">
-                                <option selected>Select a Course</option>
+                            <select class="form-control" id="course" name="course" required>
+                                <option value="" selected disabled>Select a Course</option>
                                 <option value="Automatic Radar Plotting Aids">Automatic Radar Plotting Aids</option>
                                 <option value=" Basic Safety Training [ BST= EFA+FPFF+PST+PSSR ] "> Basic Safety
                                     Training [ BST= EFA+FPFF+PST+PSSR ] </option>

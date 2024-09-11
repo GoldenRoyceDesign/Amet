@@ -1,4 +1,5 @@
 <?php
+// MySQL database credentials
 $host = 'localhost';
 $port = 3306;
 $dbname = 'ametcity_application';
@@ -9,48 +10,34 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 try {
+    // Connect to the MySQL database
     $pdo = new PDO("mysql:host=$host;port=$port;dbname=$dbname", $username, $password);
+
+    // Set error mode to exception
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+    // Check if the form is submitted
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $requestBody = json_decode(file_get_contents('php://input'), true);
+        // Get the form data
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $phone = $_POST['phone'];
+        $course = $_POST['course'];
 
-        if (isset($requestBody['name']) && 
-            isset($requestBody['email']) && 
-            isset($requestBody['phone']) && 
-            isset($requestBody['course'])) {
-            
-            $name = $requestBody['name'];
-            $email = $requestBody['email'];
-            $phone = $requestBody['phone'];
-            $course = $requestBody['course'];
+        // Insert form data into the 'course_registrations' table
+        $query = "INSERT INTO course_registrations (name, email, contact, course) VALUES (:name, :email, :phone, :course)";
+        $statement = $pdo->prepare($query);
+        $statement->bindParam(':name', $name);
+        $statement->bindParam(':email', $email);
+        $statement->bindParam(':phone', $phone);
+        $statement->bindParam(':course', $course);
+        $statement->execute();
 
-            $checkQuery = "SELECT * FROM discount_form WHERE email = ?";
-            $checkStatement = $pdo->prepare($checkQuery);
-            $checkStatement->execute([$email]);
-            $existingUser = $checkStatement->fetch();
-
-            if ($existingUser) {
-                echo json_encode(['error' => 'Email already exists in the database!']);
-            } else {
-                $query = "INSERT INTO discount_form (name, email, phone, course) VALUES (?, ?, ?, ?)";
-                $statement = $pdo->prepare($query);
-
-                $statement->bindParam(1, $name);
-                $statement->bindParam(2, $email);
-                $statement->bindParam(3, $phone);
-                $statement->bindParam(4, $course);
-
-                $statement->execute();
-                echo json_encode(['success' => 'Registration Successful.']);
-            }
-        } else {
-            echo json_encode(['error' => 'Required fields are missing!']);
-        }
-    } else {
-        echo json_encode(['error' => 'Invalid request method!']);
+        // Respond with a success message in JSON format
+        echo json_encode(['success' => true]);
     }
 } catch (PDOException $e) {
-    echo json_encode(['error' => 'Connection failed: ' . $e->getMessage()]);
+    // Respond with an error message in JSON format
+    echo json_encode(['success' => false, 'message' => htmlspecialchars($e->getMessage())]);
 }
 ?>
