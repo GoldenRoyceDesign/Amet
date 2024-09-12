@@ -16,8 +16,8 @@ try {
     // Set error mode to exception
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    // Query to select all rows from the 'discount_registration' table
-    $query = "SELECT * FROM discount_registration";
+    // Query to select all rows from the 'courseRegisterForm' table
+    $query = "SELECT * FROM courseRegisterForm";
     $statement = $pdo->query($query);
     $registrations = $statement->fetchAll(PDO::FETCH_ASSOC);
 
@@ -27,7 +27,7 @@ try {
                 width: 100%;
                 border-collapse: collapse;
             }
-                h2{
+                 h2{
                 text-align: center;
                 margin-top: 20px;
                 margin-bottom: 20px;
@@ -41,27 +41,30 @@ try {
                 background-color: #f2f2f2;
             }
           </style>';
-          // Heading for the table
-    echo '<h2>Discount Registration Details</h2>';
+           // Heading for the table
+    echo '<h2>Course Registration Form</h2>';
     echo '<table>
                <tr>
                    <th>ID</th>
-                   <th>Name</th>
+                   <th>First Name</th>
+                   <th>Last Name</th>
                    <th>Email</th>
                    <th>Phone</th>
                    <th>Course</th>
+                   <th>Message</th>
                    <th>Registration Time</th>
                </tr>';
 
-    // Iterate through each registration and display the data
     foreach ($registrations as $registration) {
         echo '<tr>';
         echo '<td>' . htmlspecialchars($registration['id']) . '</td>';
-        echo '<td>' . htmlspecialchars($registration['name']) . '</td>';
+        echo '<td>' . htmlspecialchars($registration['firstName']) . '</td>';
+        echo '<td>' . htmlspecialchars($registration['lastName']) . '</td>';
         echo '<td>' . htmlspecialchars($registration['email']) . '</td>';
         echo '<td>' . htmlspecialchars($registration['phone']) . '</td>';
         echo '<td>' . htmlspecialchars($registration['course']) . '</td>';
-        echo '<td>' . htmlspecialchars($registration['registration_time']) . '</td>';
+        echo '<td>' . htmlspecialchars($registration['message']) . '</td>';
+        echo '<td>' . htmlspecialchars($registration['registrationTime']) . '</td>';
         echo '</tr>';
     }
     echo '</table>';

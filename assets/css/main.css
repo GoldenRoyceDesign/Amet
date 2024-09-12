@@ -46,7 +46,79 @@ a {
     margin-bottom: 10px !important;
 }
 
-
+/* Style for the search container */
+.navbar .search-modal-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Style for the search icon button */
+  .navbar .search-icon {
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #333;
+  }
+  
+  /* Search modal styling */
+  .navbar  .search-modal {
+    position: fixed;
+    top: -100%; /* Start off-screen */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    width: 400px; /* Restrict the width */
+    padding: 20px;
+    z-index: 1050; /* Ensure it appears above other content */
+    transition: top 0.5s ease; /* Smooth slide-down animation */
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 1px solid #ddd;
+  }
+  
+  /* Modal content styling */
+  .navbar  .search-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Space between items */
+  }
+  
+  /* Style for the search input field */
+  .navbar  .search-input {
+    flex: 1; /* Allow input to take up available space */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Style for the close button */
+  .navbar .search-modal  .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  /* Style for the search button inside the form */
+  .navbar  .search-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  
+  .navbar  .search-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
+  
 
 
 /* Home section style */

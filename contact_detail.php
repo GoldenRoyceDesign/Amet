@@ -27,6 +27,11 @@ try {
                 width: 100%;
                 border-collapse: collapse;
             }
+                 h2{
+                text-align: center;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
             th, td {
                 padding: 8px;
                 text-align: left;
@@ -36,6 +41,8 @@ try {
                 background-color: #f2f2f2;
             }
           </style>';
+          // Heading for the table
+    echo '<h2>Contact Registration Details</h2>';
     echo '<table>
                <tr>
                    <th>ID</th>

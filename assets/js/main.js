@@ -72,14 +72,29 @@ document.addEventListener('DOMContentLoaded', () => {
 //     });
 // });
 
+// Open modal when search icon is clicked
+document.getElementById("searchIcon").onclick = function () {
+    const modal = document.getElementById("searchModal");
+    modal.style.top = "15%"; // Slide down from the top
+};
 
+// Close modal when close button is clicked
+document.getElementById("closeSearch").onclick = function () {
+    const modal = document.getElementById("searchModal");
+    modal.style.top = "-100%"; // Slide up and hide
+};
+
+// Execute search function when the form is submitted
 document.getElementById('searchForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent the default form submission behavior
     var searchValue = document.getElementById('searchInput').value.trim();
     if (searchValue) {
-      // Redirect to search results page with query parameter
-      window.location.href = `search.html?query=${encodeURIComponent(searchValue)}`;
+        // Redirect to search results page with query parameter
+        window.location.href = `search.html?query=${encodeURIComponent(searchValue)}`;
     }
-  });
+});
+
+
+  
 
 

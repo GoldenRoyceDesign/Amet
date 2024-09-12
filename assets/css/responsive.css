@@ -19,7 +19,7 @@
         background-size: cover;
         background-position: center;
         width: 100%;
-        height: 70vh;
+        height: 75vh;
     }
 
     .homeSection h1 {
@@ -35,6 +35,10 @@
     .navbar-brand img {
         width: 140px;
         height: 40px;
+    }
+
+    .navbar .navbar-toggler{
+        margin-left: 60%;
     }
 
     .homeSection {
@@ -85,6 +89,10 @@
 /* Mobile view style */
 
 @media screen and (max-width: 767px) {
+    .navbar .navbar-toggler{
+        margin-left: 40%;
+    }
+
     .homeSection {
         background-image: url('/assets/images/home/landing_page_bg.png');
         background-size: cover;
@@ -352,6 +360,18 @@
     .seat-availability-discount{
         font-size: 12px; 
     }
+
+    .navbar .search-icon {
+        font-size: 18px; /* Smaller icon size on mobile */
+    }
+
+    .navbar .search-modal {
+        width: 90%; /* Full width with some padding on mobile */
+        max-width: 360px; /* Max width for larger screens */
+        left: 25%; /* Align to the left */
+        transform: none; /* Remove horizontal centering */
+        top: 10%; /* Adjust vertical positioning */
+    }
     
 }
 
@@ -360,6 +380,24 @@
 @media screen and (min-width: 767px) {
     .home_bg_part1 {
         display: none;
+    }
+}
+
+/* For very small screens (screen width <= 576px) */
+@media (max-width: 576px) {
+    .navbar .navbar-toggler{
+        margin-left: 20%;
+    }
+
+    .navbar .search-icon {
+        font-size: 16px; /* Even smaller icon size */
+    }
+
+    .navbar .search-modal {
+        width: 95%; /* Almost full width on very small screens */
+        max-width: 320px; /* Max width for very small screens */
+        top: 15%; /* Adjust vertical positioning further */
+        left: 20%;
     }
 }
 
@@ -386,10 +424,25 @@
         text-align: center;
         width: 100%;
     }
+
+    .navbar .navbar-toggler{
+        margin-left: 5%;
+    }
+
+    .navbar .search-modal {
+        width: 100%; /* Almost full width on very small screens */
+        max-width: 300px; /* Max width for very small screens */
+        top: 15%; /* Adjust vertical positioning further */
+        left: 10%;
+    }
     
 }
 
 @media screen and (max-width: 350px) {
+    .navbar .navbar-toggler{
+        margin-left: -5%;
+    }
+
     .seat-availability .tables th,
     .tables td {
         padding: 0.75rem;
@@ -416,6 +469,13 @@
         font-weight: bold;
         text-align: center;
         width: 100%;
+    }
+
+    .navbar .search-modal {
+        width: 95%; /* Almost full width on very small screens */
+        max-width: 300px; /* Max width for very small screens */
+        top: 15%; /* Adjust vertical positioning further */
+        left: 0%;
     }
 }
 
@@ -449,5 +509,12 @@
         font-weight: bold;
         text-align: center;
         width: 100%;
+    }
+
+    .navbar .search-modal {
+        width: 95%; /* Almost full width on very small screens */
+        max-width: 320px; /* Max width for very small screens */
+        top: 15%; /* Adjust vertical positioning further */
+        left: 0;
     }
 }

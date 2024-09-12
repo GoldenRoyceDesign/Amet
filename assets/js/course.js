@@ -1,100 +1,96 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('contactForm');
-    if (!form) return; // Exit if form is not found
+document.addEventListener('DOMContentLoaded', function() {
+    // Function to handle form submission
+    function register(event) {
+        // Prevent form submission
+        event.preventDefault();
 
-    const courseInput = form.querySelector('#course');
-    const container = document.querySelector('.contactUs');
+        // Get form data
+        const form = document.getElementById('courseRegisterForm');
+        const courseInput = document.getElementById('course');
 
-    // Set the course value from the data-course attribute
-    const courseValue = container ? container.getAttribute('data-course') : '';
-    if (courseInput) {
-        courseInput.value = courseValue;
-    }
+        // Temporarily enable the course input field for form submission
+        courseInput.disabled = false;
 
-    form.addEventListener('submit', function (event) {
-        event.preventDefault(); // Prevent the form from refreshing the page
+        // Get form data and convert it to JSON
+        const formData = new FormData(form);
+        const jsonData = JSON.stringify(Object.fromEntries(formData.entries()));
 
-        // Get form values
-        const firstName = form.querySelector('#firstName').value;
-        const lastName = form.querySelector('#lastName').value;
-        const email = form.querySelector('#email').value;
-        const phone = form.querySelector('#phone').value;
-        const message = form.querySelector('#message').value;
-        const course = courseInput ? courseInput.value : '';
+        // Log JSON data for debugging
+        console.log('Sending data:', jsonData);
 
-        function showModal(message, isSuccess = false) {
-            const modal = document.getElementById("myModal");
-            const modalMessage = document.getElementById("modalMessage");
-
-            if (modal && modalMessage) {
-                modalMessage.textContent = message;
-                modal.style.display = "block";
-
-                // Style the message based on success or error
-                modalMessage.style.color = isSuccess ? "green" : "red";
-
-                // Close the modal when the user clicks the close button
-                const closeModalButton = document.getElementById("closeModal");
-                if (closeModalButton) {
-                    closeModalButton.onclick = function () {
-                        modal.style.display = "none";
-                    };
-                } else {
-                    console.error('Close button element not found.');
-                }
-            } else {
-                console.error('Modal or modalMessage element not found.');
-            }
-        }
-
-        // Function to validate email format
-        function validateEmail(email) {
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return emailPattern.test(email);
-        }
-
-        // Validate input fields
-        if (!firstName || !lastName || !email || !phone || !message) {
-            showModal("All fields are required.", false);
-            return;
-        }
-
-        // Validate email
-        if (!validateEmail(email)) {
-            showModal("Please enter a valid email address.", false);
-            return;
-        }
-
-        // Prepare form data for sending to the server
-        const formData = {
-            firstName: firstName,
-            lastName: lastName,
-            email: email,
-            phone: phone,
-            message: message,
-            course: course
-        };
-
-        // Send the form data to the server using fetch
-        fetch("course.php", {
-            method: "POST",
-            body: JSON.stringify(formData),
+        // Send form data using fetch
+        fetch('/course.php', {
+            method: 'POST',
             headers: {
-                "Content-Type": "application/json"
-            }
+                'Content-Type': 'application/json',
+            },
+            body: jsonData
         })
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                showModal("Your form has been submitted successfully!", true); // Show success message
-                form.reset(); // Clear the form fields
+                // Show success message in the modal
+                showModal(data.success, 'success');
+                // Reset the form fields
+                form.reset();
+                // Re-disable the course input field
+                courseInput.disabled = true;
             } else {
-                showModal(data.error, false); // Show error message
+                // Show error message in the modal
+                showModal(data.error, 'error');
+                // Re-disable the course input field
+                courseInput.disabled = true;
             }
         })
         .catch(error => {
-            console.error("Error:", error);
-            showModal("An error occurred. Please try again.", false);
+            console.error('Error:', error);
+            showModal('There was an error. Please try again.', 'error');
+            // Re-disable the course input field
+            courseInput.disabled = true;
         });
-    });
+    }
+
+    // Function to show modal
+    function showModal(message, type) {
+        const modal = document.getElementById('myModal');
+        const modalMessage = document.getElementById('modalMessage');
+        
+        // Set the modal message text
+        modalMessage.textContent = message;
+
+        // Apply styles based on message type
+        if (type === 'success') {
+            modalMessage.style.color = 'green'; // Success message in green
+        } else if (type === 'error') {
+            modalMessage.style.color = 'red'; // Error message in red
+        } else {
+            modalMessage.style.color = 'black'; // Default color
+        }
+
+        // Show the modal
+        modal.style.display = 'block';
+    }
+
+    // Function to close modal
+    document.getElementById('closeModal').onclick = function () {
+        document.getElementById('myModal').style.display = 'none'; // Hide the modal
+    };
+
+    // Close the modal when clicking outside of it
+    window.onclick = function (event) {
+        const modal = document.getElementById('myModal');
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    };
+
+    // Set the course input value from data-course attribute
+    const courseInput = document.getElementById('course');
+    const courseData = document.querySelector('.contactUs').getAttribute('data-course');
+    if (courseInput && courseData) {
+        courseInput.value = courseData;
+    }
+
+    // Attach the register function to form submit event
+    document.getElementById('courseRegisterForm').addEventListener('submit', register);
 });
