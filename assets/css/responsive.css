@@ -37,7 +37,7 @@
         height: 40px;
     }
 
-    .navbar .navbar-toggler{
+    .navbar .navbar-toggler {
         margin-left: 60%;
     }
 
@@ -62,21 +62,21 @@
         width: 100% !important;
     }
 
-    .postsea_image{
+    .postsea_image {
         width: 100%;
         height: 70%;
     }
 
-    .testimonials .container > .row{
+    .testimonials .container>.row {
         padding: 0 !important;
         margin: 0 !important;
     }
 
-    .timeline img{
+    .timeline img {
         width: 80%;
     }
 
-    .gallery{
+    .gallery {
         padding: 0;
     }
 
@@ -89,7 +89,7 @@
 /* Mobile view style */
 
 @media screen and (max-width: 767px) {
-    .navbar .navbar-toggler{
+    .navbar .navbar-toggler {
         margin-left: 40%;
     }
 
@@ -136,26 +136,26 @@
         display: block;
         position: relative;
     }
-    
+
     .home_bg_part1 .col-md-6::before {
         content: "";
         position: absolute;
         top: 0;
         left: 0;
-        width: 50%; 
+        width: 50%;
         height: 100%;
-        background: rgba(0, 0, 255, 0.6); 
-        z-index: 1; 
+        background: rgba(0, 0, 255, 0.6);
+        z-index: 1;
     }
-    
+
     .home_bg_part1 .overlay-text {
         position: absolute;
-        bottom: 10%; 
-        left: 30px; 
-        padding: 10px; 
+        bottom: 10%;
+        left: 30px;
+        padding: 10px;
         font-weight: bold;
-        color: white; 
-        z-index: 2; 
+        color: white;
+        z-index: 2;
     }
 
     .home_bg_part1 .col-md-3,
@@ -163,7 +163,7 @@
         padding: 10px;
         width: 100%;
         box-sizing: border-box;
-        background-color: rgba(0, 0, 0, 0.7); 
+        background-color: rgba(0, 0, 0, 0.7);
     }
 
     .home_bg_part1 #home_discount_prices1,
@@ -175,19 +175,19 @@
     #home_discount_prices1 {
         background-image: linear-gradient(0deg, #000000 0%, #333333 50%, #666666 100%);
         padding: 20px;
-        color: #fff; 
+        color: #fff;
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
-    
+
     /* Specific Styles for the 'Package Courses' Section */
     #home_package_course1 {
         background-image: url('/assets/images/home/package_course_image.png');
-        background-size: cover; 
-        background-position: center; 
+        background-size: cover;
+        background-position: center;
         padding: 20px;
-        color: #fff; 
+        color: #fff;
         background-color: rgba(0, 0, 0, 0.7);
         height: 200px;
     }
@@ -216,11 +216,14 @@
     }
 
     .counter-column {
-        min-height: 120px; /* Adjust height for smaller screens */
+        min-height: 120px;
+        /* Adjust height for smaller screens */
     }
-    .attached-image{
+
+    .attached-image {
         width: 50%;
     }
+
     .overlay-text {
         font-size: 0.8rem;
     }
@@ -230,25 +233,25 @@
         bottom: 0;
         left: 0;
         right: 0;
-        height: 35%; 
-        background: linear-gradient(to top, rgb(46, 49, 146, 0.9), transparent); 
-        pointer-events: none; 
+        height: 35%;
+        background: linear-gradient(to top, rgb(46, 49, 146, 0.9), transparent);
+        pointer-events: none;
         border-radius: 10px;
     }
 
-    .feature-mb-view{
+    .feature-mb-view {
         margin-bottom: 10px !important;
     }
 
-    .feature_course_mb_view{
+    .feature_course_mb_view {
         flex-direction: column;
     }
 
-    .feature_course_mb_view > div{
+    .feature_course_mb_view>div {
         margin-bottom: 20px;
     }
 
-    .postsea_image{
+    .postsea_image {
         width: 70%;
     }
 
@@ -256,29 +259,29 @@
         font-size: 1.2rem;
     }
 
-    .testimonials .container{
+    .testimonials .container {
         padding: 10px !important;
     }
 
-    .testimonials .container > .row{
+    .testimonials .container>.row {
         padding: 0 !important;
         margin: 0 !important;
     }
 
-    .knowledge-section .col-12{
+    .knowledge-section .col-12 {
         margin-bottom: 20px;
     }
 
-    .home-page-contact{
+    .home-page-contact {
         padding: 20px !important;
         margin: 0 !important;
     }
 
-    .home-form{
+    .home-form {
         margin-bottom: 30px !important;
     }
 
-    .contactUs{
+    .contactUs {
         padding: 30px !important;
     }
 
@@ -286,11 +289,11 @@
         padding: 50px;
     }
 
-    .timeline img{
+    .timeline img {
         width: 100%;
     }
 
-    .gallery .collage-container .collage-bottom-row{
+    .gallery .collage-container .collage-bottom-row {
         flex-direction: column;
     }
 
@@ -298,80 +301,89 @@
         font-size: 14px;
         height: 40%;
     }
-    
+
     /* course style */
 
     .course-page .table-responsive {
         overflow-x: auto;
     }
-    
+
     .course-page .table {
         display: block;
         width: 100%;
         border-collapse: collapse;
     }
-    
+
     .course-page .table thead {
-        display: none; /* Hide header for mobile view */
+        display: none;
+        /* Hide header for mobile view */
     }
-    
-    .course-page .table tbody, .table tr {
+
+    .course-page .table tbody,
+    .table tr {
         display: block;
         width: 100%;
         margin-bottom: 1rem;
         border-bottom: 1px solid #dee2e6;
     }
-    
+
     .course-page .table td {
         display: flex;
         flex-direction: column;
         padding: 0.75rem;
-        border: none; /* Remove border on mobile */
+        border: none;
+        /* Remove border on mobile */
         text-align: left;
     }
 
-    
+
     .course-page .table td::before {
         content: attr(data-label);
         font-weight: bold;
         margin-bottom: 0.5rem;
-        color: white; /* Header text color */
+        color: white;
+        /* Header text color */
         background: #22C9CF;
         padding: 5px;
     }
 
-    .course-page .table select{
+    .course-page .table select {
         background: #8E90D3;
         color: white;
     }
 
-    .course-page .table select{
+    .course-page .table select {
         width: fit-content;
     }
 
-    .course-page .table button{
+    .course-page .table button {
         width: fit-content;
     }
 
-    .automaticradar .fee-detail h4{
+    .automaticradar .fee-detail h4 {
         font-size: 16px;
     }
-    
-    .seat-availability-discount{
-        font-size: 12px; 
+
+    .seat-availability-discount {
+        font-size: 12px;
     }
 
     .navbar .search-icon {
-        font-size: 18px; /* Smaller icon size on mobile */
+        font-size: 18px;
+        /* Smaller icon size on mobile */
     }
 
     .navbar .search-modal {
-        width: 90%; /* Full width with some padding on mobile */
-        max-width: 360px; /* Max width for larger screens */
-        left: 25%; /* Align to the left */
-        transform: none; /* Remove horizontal centering */
+        width: 90%;
+        /* Full width with some padding on mobile */
+        max-width: 360px;
+        /* Max width for larger screens */
+        left: 25%;
+        /* Align to the left */
+        transform: none;
+        /* Remove horizontal centering */
     }
-    
+
 }
 
 
@@ -384,31 +396,34 @@
 
 /* For very small screens (screen width <= 576px) */
 @media (max-width: 576px) {
-    .navbar .navbar-toggler{
+    .navbar .navbar-toggler {
         margin-left: 20%;
     }
 
     .navbar .search-icon {
-        font-size: 16px; /* Even smaller icon size */
+        font-size: 16px;
+        /* Even smaller icon size */
     }
 
     .navbar .search-modal {
-        width: 95%; /* Almost full width on very small screens */
-        max-width: 320px; /* Max width for very small screens */
+        width: 95%;
+        /* Almost full width on very small screens */
+        max-width: 320px;
+        /* Max width for very small screens */
         left: 20%;
     }
 }
 
 @media screen and (min-width: 350px) and (max-width: 400px) {
-    .seat-availability .course-head{
+    .seat-availability .course-head {
         width: 90vw;
     }
 
-    .seat-availability .sub-course-head{
+    .seat-availability .sub-course-head {
         width: 90vw;
     }
 
-    .about .about-img{
+    .about .about-img {
         width: 90vw !important;
     }
 
@@ -423,52 +438,44 @@
         width: 100%;
     }
 
-    .navbar .navbar-toggler{
+    .navbar .navbar-toggler {
         margin-left: 5%;
     }
 
     .navbar .search-modal {
-        width: 100%; /* Almost full width on very small screens */
-        max-width: 300px; /* Max width for very small screens */
+        width: 100%;
+        /* Almost full width on very small screens */
+        max-width: 300px;
+        /* Max width for very small screens */
         left: 10%;
     }
 
-     /* Style for the search input field */
-  .navbar  .search-input {
-    flex: 1; /* Allow input to take up available space */
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  /* Style for the close button */
-  .navbar .search-modal  .close {
-    position: absolute;
-    top: 0px;
-    right: 12px;
-    font-size: 15px;
-    cursor: pointer;
-    color: #333;
-  }
-  
-  /* Style for the search button inside the form */
-  .navbar  .search-button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 6px 8px;
-    border-radius: 4px;
-    cursor: pointer;
-    white-space: nowrap;
-  }
-    
+    /* Style for the search input field */
+    .navbar .search-input {
+        flex: 1;
+        /* Allow input to take up available space */
+        padding: 5px;
+    }
+
+    /* Style for the close button */
+    .navbar .search-modal .close {
+        position: absolute;
+        top: 0px;
+        right: 12px;
+    }
+
+    /* Style for the search button inside the form */
+    .navbar .search-button {
+        padding: 6px 8px;
+    }
+
 }
 
 @media screen and (max-width: 350px) {
-    .navbar .navbar-toggler{
+    .navbar .navbar-toggler {
         margin-left: -5%;
     }
-    
+
     .seat-availability .tables th,
     .tables td {
         padding: 0.75rem;
@@ -477,12 +484,12 @@
         font-size: 12px;
     }
 
-    .automaticradar .fee-detail > div{
+    .automaticradar .fee-detail>div {
         flex-direction: column;
         gap: 10px !important;
     }
 
-    .about .about-img{
+    .about .about-img {
         width: 90vw !important;
     }
 
@@ -498,39 +505,31 @@
     }
 
     .navbar .search-modal {
-        width: 95%; /* Almost full width on very small screens */
-        max-width: 300px; /* Max width for very small screens */
+        width: 95%;
+        /* Almost full width on very small screens */
+        max-width: 300px;
+        /* Max width for very small screens */
         left: 0%;
     }
 
-     /* Style for the search input field */
-  .navbar  .search-input {
-    flex: 1; /* Allow input to take up available space */
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  /* Style for the close button */
-  .navbar .search-modal  .close {
-    position: absolute;
-    top: 0px;
-    right: 12px;
-    font-size: 15px;
-    cursor: pointer;
-    color: #333;
-  }
-  
-  /* Style for the search button inside the form */
-  .navbar  .search-button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 6px 8px;
-    border-radius: 4px;
-    cursor: pointer;
-    white-space: nowrap;
-  }
+    /* Style for the search input field */
+    .navbar .search-input {
+        flex: 1;
+        /* Allow input to take up available space */
+        padding: 5px;
+    }
+
+    /* Style for the close button */
+    .navbar .search-modal .close {
+        position: absolute;
+        top: 0px;
+        right: 12px;
+    }
+
+    /* Style for the search button inside the form */
+    .navbar .search-button {
+        padding: 6px 8px;
+    }
 }
 
 @media screen and (max-width: 326px) {
@@ -538,9 +537,11 @@
         width: 140px;
         height: 35px;
     }
-    .navbar{
+
+    .navbar {
         padding: 3px !important;
     }
+
     .gallery .text-overlay {
         font-size: 12px;
         height: 40%;
@@ -553,7 +554,7 @@
         border-top: 1px solid #dee2e6;
         font-size: 10px;
     }
-    
+
     .course-overtext .overlay-text {
         position: absolute;
         bottom: 0;
@@ -566,37 +567,59 @@
     }
 
     .navbar .search-modal {
-        width: 95%; /* Almost full width on very small screens */
-        max-width: 320px; /* Max width for very small screens */
+        width: 95%;
+        /* Almost full width on very small screens */
+        max-width: 320px;
+        /* Max width for very small screens */
         left: 0;
     }
 
     /* Style for the search input field */
-  .navbar  .search-input {
-    flex: 1; /* Allow input to take up available space */
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  /* Style for the close button */
-  .navbar .search-modal  .close {
-    position: absolute;
-    top: 0px;
-    right: 12px;
-    font-size: 15px;
-    cursor: pointer;
-    color: #333;
-  }
-  
-  /* Style for the search button inside the form */
-  .navbar  .search-button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 6px 8px;
-    border-radius: 4px;
-    cursor: pointer;
-    white-space: nowrap;
-  }
+    .navbar .search-input {
+        flex: 1;
+        /* Allow input to take up available space */
+        padding: 5px;
+    }
+
+    /* Style for the close button */
+    .navbar .search-modal .close {
+        position: absolute;
+        top: 0px;
+        right: 12px;
+    }
+
+    /* Style for the search button inside the form */
+    .navbar .search-button {
+        padding: 6px 8px;
+    }
+}
+
+@media screen and (max-width: 290px) {
+    .navbar .search-modal {
+        width: 95%;
+        /* Almost full width on very small screens */
+        max-width: 320px;
+        /* Max width for very small screens */
+        left: 6px;
+    }
+
+    /* Style for the search input field */
+    .navbar .search-input {
+        flex: 1;
+        /* Allow input to take up available space */
+        padding: 2px;
+        width: 140px;
+    }
+
+    /* Style for the close button */
+    .navbar .search-modal .close {
+        position: absolute;
+        top: 0px;
+        right: 12px;
+    }
+
+    /* Style for the search button inside the form */
+    .navbar .search-button {
+        padding: 4px 8px;
+    }
 }
