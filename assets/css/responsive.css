@@ -432,6 +432,35 @@
         max-width: 300px; /* Max width for very small screens */
         left: 10%;
     }
+
+     /* Style for the search input field */
+  .navbar  .search-input {
+    flex: 1; /* Allow input to take up available space */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Style for the close button */
+  .navbar .search-modal  .close {
+    position: absolute;
+    top: 0px;
+    right: 12px;
+    font-size: 15px;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  /* Style for the search button inside the form */
+  .navbar  .search-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 6px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
     
 }
 
@@ -473,6 +502,35 @@
         max-width: 300px; /* Max width for very small screens */
         left: 0%;
     }
+
+     /* Style for the search input field */
+  .navbar  .search-input {
+    flex: 1; /* Allow input to take up available space */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Style for the close button */
+  .navbar .search-modal  .close {
+    position: absolute;
+    top: 0px;
+    right: 12px;
+    font-size: 15px;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  /* Style for the search button inside the form */
+  .navbar  .search-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 6px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
 }
 
 @media screen and (max-width: 326px) {
@@ -512,4 +570,33 @@
         max-width: 320px; /* Max width for very small screens */
         left: 0;
     }
+
+    /* Style for the search input field */
+  .navbar  .search-input {
+    flex: 1; /* Allow input to take up available space */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Style for the close button */
+  .navbar .search-modal  .close {
+    position: absolute;
+    top: 0px;
+    right: 12px;
+    font-size: 15px;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  /* Style for the search button inside the form */
+  .navbar  .search-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 6px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
 }
