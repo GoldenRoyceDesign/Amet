@@ -370,7 +370,6 @@
         max-width: 360px; /* Max width for larger screens */
         left: 25%; /* Align to the left */
         transform: none; /* Remove horizontal centering */
-        top: 10%; /* Adjust vertical positioning */
     }
     
 }
@@ -396,7 +395,6 @@
     .navbar .search-modal {
         width: 95%; /* Almost full width on very small screens */
         max-width: 320px; /* Max width for very small screens */
-        top: 15%; /* Adjust vertical positioning further */
         left: 20%;
     }
 }
@@ -432,7 +430,6 @@
     .navbar .search-modal {
         width: 100%; /* Almost full width on very small screens */
         max-width: 300px; /* Max width for very small screens */
-        top: 15%; /* Adjust vertical positioning further */
         left: 10%;
     }
     
@@ -442,7 +439,7 @@
     .navbar .navbar-toggler{
         margin-left: -5%;
     }
-
+    
     .seat-availability .tables th,
     .tables td {
         padding: 0.75rem;
@@ -474,7 +471,6 @@
     .navbar .search-modal {
         width: 95%; /* Almost full width on very small screens */
         max-width: 300px; /* Max width for very small screens */
-        top: 15%; /* Adjust vertical positioning further */
         left: 0%;
     }
 }
@@ -514,7 +510,6 @@
     .navbar .search-modal {
         width: 95%; /* Almost full width on very small screens */
         max-width: 320px; /* Max width for very small screens */
-        top: 15%; /* Adjust vertical positioning further */
         left: 0;
     }
 }
