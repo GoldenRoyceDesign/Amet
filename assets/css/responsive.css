@@ -649,3 +649,30 @@
         padding: 2px 6px;
     }
 }
+
+@media screen and (max-width: 244px) {
+    .navbar .search-modal {
+        width: 100%;
+        left: 0;
+    }
+
+    /* Style for the search input field */
+    .navbar .search-input {
+        flex: 1;
+        /* Allow input to take up available space */
+        padding: 2px;
+        width: 100px;
+    }
+
+    /* Style for the close button */
+    .navbar .search-modal .close {
+        position: absolute;
+        top: 0px;
+        right: 12px;
+    }
+
+    /* Style for the search button inside the form */
+    .navbar .search-button {
+        padding: 2px 6px;
+    }
+}
