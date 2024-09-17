@@ -7,6 +7,14 @@ document.addEventListener('DOMContentLoaded', function() {
         // Get form data
         const form = document.getElementById('courseRegisterForm');
         const courseInput = document.getElementById('course');
+        const indosNumber = document.getElementById('indosNumber').value;
+
+        // Validate INDoS Number format
+        const indosPattern = /^[A-Z0-9]{8}$/; // 8 alphanumeric characters
+        if (!indosPattern.test(indosNumber)) {
+            showModal('INDoS Number must be 8 alphanumeric characters', 'error');
+            return; // Stop form submission if validation fails
+        }
 
         // Temporarily enable the course input field for form submission
         courseInput.disabled = false;

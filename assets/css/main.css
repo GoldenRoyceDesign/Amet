@@ -24,7 +24,7 @@ a {
 
 .navbar-nav .nav-item a {
     color: #000000;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .navbar-nav .nav-item a:hover {
@@ -47,77 +47,33 @@ a {
 }
 
 /* Style for the search container */
-.navbar .search-modal-container {
+.searchcontainer {
     position: relative;
     display: flex;
     align-items: center;
-  }
-  
-  /* Style for the search icon button */
-  .navbar .search-icon {
-    cursor: pointer;
+}
+
+/* Search icon button styling */
+.search-icon {
+    position: absolute;
+    right: 10px; /* Position the icon on the right side */
     background: none;
     border: none;
     font-size: 20px;
+    cursor: pointer;
     color: #333;
-  }
-  
-  /* Search modal styling */
-  .navbar  .search-modal {
-    position: fixed;
-    top: -100%; /* Start off-screen */
-    left: 50%;
-    transform: translateX(-50%); /* Center horizontally */
-    width: 400px; /* Restrict the width */
-    padding: 20px;
-    z-index: 1050; /* Ensure it appears above other content */
-    transition: top 0.5s ease; /* Smooth slide-down animation */
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    border: 1px solid #ddd;
-  }
-  
-  /* Modal content styling */
-  .navbar  .search-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px; /* Space between items */
-  }
-  
-  /* Style for the search input field */
-  .navbar  .search-input {
-    flex: 1; /* Allow input to take up available space */
+    z-index: 1; /* Ensure the icon appears above the input */
+}
+
+/* Search input field styling */
+.search-input {
+    width: 200px; /* Set a fixed width for the input field */
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
-  }
-  
-  /* Style for the close button */
-  .navbar .search-modal  .close {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 20px;
-    cursor: pointer;
-    color: #333;
-  }
-  
-  /* Style for the search button inside the form */
-  .navbar  .search-button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 4px;
-    cursor: pointer;
-    white-space: nowrap;
-  }
-  
-  .navbar  .search-button:hover {
-    background-color: #0056b3; /* Darker shade on hover */
-  }
+    box-sizing: border-box; /* Ensure padding does not affect width */
+    transition: none; /* Remove any transition effects */
+}
   
 
 
@@ -403,6 +359,45 @@ a {
 
 .course_offered h2 {
     color: #2d3192;
+}
+
+
+.brochure-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 20px;
+    color: black;
+    font-weight: 500;
+    border: none;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* Remove underline for link */
+}
+
+.brochure-button:hover {
+    background-color: #2E3192;
+    color: white;
+}
+
+.brochure-button .arrow-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background-color: #2E3192;
+    color: white;
+    border-radius: 50%;
+    font-size: 14px;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.brochure-button:hover .arrow-circle {
+    transform: translateY(3px); /* Move down on hover */
+    background-color: white;
+    color: #2E3192;
 }
 
 
@@ -1216,4 +1211,62 @@ textarea {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+/* Whatsapp Button */
+.whatsapp-button {
+    position: fixed;
+    right: 20px; /* Adjust the distance from the right */
+    bottom: 70px; /* Adjust the distance from the bottom */
+    background-color: #25D366;
+    color: white;
+    width: 50px; /* Equal width and height for circle */
+    height: 50px; /* Equal width and height for circle */
+    border-radius: 50%; /* Makes it a perfect circle */
+    text-align: center; /* Centers the icon horizontally */
+    line-height: 50px; /* Centers the icon vertically */
+    text-decoration: none;
+    font-size: 24px; /* Adjust icon size */
+    z-index: 1000; /* Keeps it above other elements */
+}
+
+.whatsapp-button i {
+    margin: 0;
+}
+
+.whatsapp-button:hover {
+    background-color: #128C7E;
+}
+
+
+/* Video style */
+
+/* Style for the new video button */
+.new-video-button {
+    position: fixed;
+    right: 20px; /* Adjust the distance from the right */
+    bottom: 150px; /* Adjust the distance from the bottom */
+    background-color: #2d3192; /* Background color */
+    color: white; /* Text color (if applicable) */
+    width: 100px; /* Width of the box */
+    height: 100px; /* Height of the box */
+    border-radius: 10px; /* Rounded corners */
+    text-align: center; /* Centers the image */
+    line-height: 100px; /* Centers the image vertically */
+    text-decoration: none; /* Removes underline */
+    z-index: 1000; /* Keeps it above other elements */
+    box-shadow: 0 4px 4px 4px #1116CC;
+}
+
+/* Style for the image inside the button */
+.new-video-button .video-thumbnail {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px; /* Matches the button's border radius */
+    object-fit: cover; /* Ensures the image fits well */
+}
+
+/* Hover effect */
+.new-video-button:hover {
+    background-color: #1116CC; /* Darker background color on hover */
 }

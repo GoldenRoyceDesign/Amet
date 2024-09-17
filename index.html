@@ -23,10 +23,10 @@
     <!-- Header section start -->
     <header>
         <nav class="navbar navbar-expand-lg p-2">
-            <div class="container-fluid">
+            <div class="container-fluid gap-1">
                 <!-- Left-side logo -->
                 <a class="navbar-brand" href="/">
-                    <img src="assets/images/header/amet_logo.png" alt="Logo" width="220" height="62">
+                    <img src="assets/images/header/amet_logo.png" alt="Logo" width="270" height="80">
                 </a>
 
 
@@ -95,21 +95,13 @@
                 </div>
 
                 <!-- Search icon and modal outside of the collapsible menu -->
-                <div class="search-modal-container">
+                <div class="searchcontainer">
+                    <input type="text" id="searchInput" placeholder="Search..." class="search-input">
                     <button id="searchIcon" class="search-icon">
-                        <i class="fas fa-search"></i> <!-- Font Awesome icon -->
+                        <i class="fas fa-search"></i>
                     </button>
-                    <div id="searchModal" class="search-modal">
-                        <div class="search-content">
-                            <span id="closeSearch" class="close">&times;</span>
-                            <form id="searchForm">
-                                <input type="text" id="searchInput" placeholder="Search..." class="search-input">
-                                <button type="submit" class="search-button">Search</button>
-                            </form>
-                        </div>
-                    </div>
                 </div>
-                
+
             </div>
         </nav>
     </header>
@@ -261,10 +253,13 @@
                         <!-- Image with Blue Linear Gradient at the Bottom -->
                         <div
                             class="col-md-6 d-flex flex-column align-items-center justify-content-center mb-5 position-relative feature-mb-view">
-                            <img src="assets/images/home/feature_image_secondmate.png" alt="feature_image" class="img-fluid" />
+                            <img src="assets/images/home/feature_image_secondmate.png" alt="feature_image"
+                                class="img-fluid" />
                             <div class="gradient-overlay"></div>
-                            <a href="/courses.html?tab=tab4"><p class="overlay-text">Second Mate (FG) Competency
-                                courses - Details</p></a>
+                            <a href="/courses.html?tab=tab4">
+                                <p class="overlay-text">Second Mate (FG) Competency
+                                    courses - Details</p>
+                            </a>
                         </div>
 
                         <!-- Important Features Section -->
@@ -289,9 +284,12 @@
                                         </div> -->
                                         <div class="position-relative ms-3">
                                             <img src="assets/images/home/feature_image_radar.png"
-                                                alt="feature_image_radar" class="img-fluid" style="border-radius: 25px;"/>
+                                                alt="feature_image_radar" class="img-fluid"
+                                                style="border-radius: 25px;" />
                                             <div class="gradient-overlay"></div>
-                                            <a href="/courses.html?tab=tab1"><p class="overlay-text">Navigation Simulator Course - Details</p></a>
+                                            <a href="/courses.html?tab=tab1">
+                                                <p class="overlay-text">Navigation Simulator Course - Details</p>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -361,10 +359,19 @@
                     excellence, we offer a diverse range of programs designed to meet DG Shipping requirements as well
                     as the evolving needs of our students and prepare them for
                     successful careers.</p>
-                <button class="btn custom-button" data-bs-toggle="modal" data-bs-target="#discountModal">
-                    CLICK HERE FOR SPECIAL DISCOUNT
-                    <span class="arrow-circle">&#10140;</span>
-                </button>
+                <div class="d-flex align-items-center gap-3 dis-btns">
+                    <button class="btn custom-button" data-bs-toggle="modal" data-bs-target="#discountModal">
+                        CLICK HERE FOR SPECIAL DISCOUNT
+                        <span class="arrow-circle">&#10140;</span>
+                    </button>
+
+                    <!-- Download Button -->
+                    <a href="assets/download/Pambhlet B updated copy.pdf" class="btn brochure-button" download>
+                        Download Brochure
+                        <span class="arrow-circle">&#x2B07;</span>
+                    </a>
+                </div>
+
             </div>
         </div>
 
@@ -385,7 +392,13 @@
                         <form id="discountForm" onsubmit="register(event)">
                             <div class="mb-3">
                                 <label for="name" class="form-label">Full Name</label>
-                                <input type="text" class="form-control" id="name" name="name" required>
+                                <input type="text" class="form-control" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="indosNumber" class="form-label">INDoS Number</label>
+                                <input type="text" class="form-control" id="indosNumber" name="indosNumber"
+                                    pattern="^[A-Z0-9]{8}$" title="INDoS Number must be 8 alphanumeric characters"
+                                    required>
                             </div>
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email ID</label>
@@ -427,6 +440,10 @@
                                         Course For Trainers - VICT</option>
                                 </select>
                             </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" name="message" rows="4"></textarea>
+                            </div>
                             <!-- Add more form fields as needed -->
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
@@ -436,7 +453,7 @@
             </div>
         </div>
 
-        
+
 
     </div>
     <!-- Post sea courses section end -->
@@ -876,6 +893,39 @@
         </div>
     </div>
     <!-- Contact Form Section End -->
+
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/919176079666?text=Hello" target="_blank" class="whatsapp-button">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- New Video PNG-->
+    <a href="#" class="new-video-button" data-bs-toggle="modal" data-bs-target="#newVideoModal">
+        <img src="assets/images/home/amet-alumni-promo.png" alt="Play Video" class="video-thumbnail">
+    </a>
+
+    <!-- New Video Modal -->
+    <div class="modal fade" id="newVideoModal" tabindex="-1" aria-labelledby="newVideoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="newVideoModalLabel">Amet city campus Alumni promo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="ratio ratio-16x9">
+                        <!-- Google Drive Embedded Video -->
+                        <iframe id="newVideoPlayer" src="" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
 
 
     <!-- Footer Section start -->

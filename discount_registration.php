@@ -17,7 +17,7 @@ try {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Query to select all rows from the 'discount_registration' table
-    $query = "SELECT * FROM discount_registration";
+    $query = "SELECT * FROM courseRegisterForm";
     $statement = $pdo->query($query);
     $registrations = $statement->fetchAll(PDO::FETCH_ASSOC);
 
@@ -46,10 +46,12 @@ try {
     echo '<table>
                <tr>
                    <th>ID</th>
-                   <th>Name</th>
+                   <th>First Name</th>
+                   <th>IndosNumber</th>
                    <th>Email</th>
                    <th>Phone</th>
                    <th>Course</th>
+                   <th>Message</th>
                    <th>Registration Time</th>
                </tr>';
 
@@ -57,11 +59,13 @@ try {
     foreach ($registrations as $registration) {
         echo '<tr>';
         echo '<td>' . htmlspecialchars($registration['id']) . '</td>';
-        echo '<td>' . htmlspecialchars($registration['name']) . '</td>';
+        echo '<td>' . htmlspecialchars($registration['firstName']) . '</td>';
+        echo '<td>' . htmlspecialchars($registration['indosNumber']) . '</td>';
         echo '<td>' . htmlspecialchars($registration['email']) . '</td>';
         echo '<td>' . htmlspecialchars($registration['phone']) . '</td>';
         echo '<td>' . htmlspecialchars($registration['course']) . '</td>';
-        echo '<td>' . htmlspecialchars($registration['registration_time']) . '</td>';
+        echo '<td>' . htmlspecialchars($registration['message']) . '</td>';
+        echo '<td>' . htmlspecialchars($registration['registrationTime']) . '</td>';
         echo '</tr>';
     }
     echo '</table>';

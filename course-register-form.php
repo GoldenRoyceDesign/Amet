@@ -47,7 +47,7 @@ try {
                <tr>
                    <th>ID</th>
                    <th>First Name</th>
-                   <th>Last Name</th>
+                   <th>IndosNumber</th>
                    <th>Email</th>
                    <th>Phone</th>
                    <th>Course</th>
@@ -59,7 +59,7 @@ try {
         echo '<tr>';
         echo '<td>' . htmlspecialchars($registration['id']) . '</td>';
         echo '<td>' . htmlspecialchars($registration['firstName']) . '</td>';
-        echo '<td>' . htmlspecialchars($registration['lastName']) . '</td>';
+        echo '<td>' . htmlspecialchars($registration['indosNumber']) . '</td>';
         echo '<td>' . htmlspecialchars($registration['email']) . '</td>';
         echo '<td>' . htmlspecialchars($registration['phone']) . '</td>';
         echo '<td>' . htmlspecialchars($registration['course']) . '</td>';

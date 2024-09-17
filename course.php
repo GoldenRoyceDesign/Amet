@@ -29,7 +29,7 @@ try {
 
         // Check if all required fields are present
         if (isset($requestBody['firstName']) && 
-            isset($requestBody['lastName']) && 
+            isset($requestBody['indosNumber']) && // Changed from lastName to indosNumber
             isset($requestBody['email']) && 
             isset($requestBody['phone']) && 
             isset($requestBody['course']) &&
@@ -37,32 +37,27 @@ try {
 
             // Extract data from the request body
             $firstName = $requestBody['firstName'];
-            $lastName = $requestBody['lastName'];
+            $indosNumber = $requestBody['indosNumber']; // Changed from lastName to indosNumber
             $email = $requestBody['email'];
             $phone = $requestBody['phone'];
             $course = $requestBody['course'];
             $message = $requestBody['message'];
 
-            // Check if the email already exists in the database
-            $checkQuery = "SELECT * FROM courseRegisterForm WHERE email = ?";
-            $checkStatement = $pdo->prepare($checkQuery);
-            $checkStatement->execute([$email]);
-            $existingUser = $checkStatement->fetch();
-
-            if ($existingUser) {
-                // Return an error message if the email already exists
-                echo json_encode(['error' => 'Email already exists in the database!']);
-            } else {
-                // Prepare the INSERT statement
-                $query = "INSERT INTO courseRegisterForm (firstName, lastName, email, phone, course, message) VALUES (?, ?, ?, ?, ?, ?)";
-                $statement = $pdo->prepare($query);
-
-                // Bind the parameters and execute the statement
-                $statement->execute([$firstName, $lastName, $email, $phone, $course, $message]);
-
-                // Return a success message
-                echo json_encode(['success' => 'Registration Successful.']);
+            // Validate INDoS number (8 alphanumeric characters)
+            if (!preg_match('/^[A-Z0-9]{8}$/', $indosNumber)) {
+                echo json_encode(['error' => 'Invalid INDoS Number. It must be 8 alphanumeric characters.']);
+                exit;
             }
+
+            // Prepare the INSERT statement (allows duplicate emails)
+            $query = "INSERT INTO courseRegisterForm (firstName, indosNumber, email, phone, course, message) VALUES (?, ?, ?, ?, ?, ?)";
+            $statement = $pdo->prepare($query);
+
+            // Bind the parameters and execute the statement
+            $statement->execute([$firstName, $indosNumber, $email, $phone, $course, $message]);
+
+            // Return a success message
+            echo json_encode(['success' => 'Registration Successful.']);
         } else {
             // Return an error message if required fields are missing
             echo json_encode(['error' => 'Required fields are missing!']);

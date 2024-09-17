@@ -37,26 +37,15 @@ try {
             $course = $requestBody['course'];
             $message = $requestBody['message'];
 
-            // Check if the email already exists in the database
-            $checkQuery = "SELECT * FROM contact_form WHERE email = ?";
-            $checkStatement = $pdo->prepare($checkQuery);
-            $checkStatement->execute([$email]);
-            $existingUser = $checkStatement->fetch();
+            // Prepare the INSERT statement to allow duplicate emails
+            $query = "INSERT INTO contact_form (name, lastName, email, phone, course, message) VALUES (?, ?, ?, ?, ?, ?)";
+            $statement = $pdo->prepare($query);
 
-            if ($existingUser) {
-                // Return an error message if the email already exists
-                echo json_encode(['error' => 'Email already exists in the database!']);
-            } else {
-                // Prepare the INSERT statement
-                $query = "INSERT INTO contact_form (name, lastName, email, phone, course, message) VALUES (?, ?, ?, ?, ?, ?)";
-                $statement = $pdo->prepare($query);
+            // Bind the parameters and execute the statement
+            $statement->execute([$name, $lastName, $email, $phone, $course, $message]);
 
-                // Bind the parameters and execute the statement
-                $statement->execute([$name, $lastName, $email, $phone, $course, $message]);
-
-                // Return a success message
-                echo json_encode(['success' => 'Registration Successful.']);
-            }
+            // Return a success message
+            echo json_encode(['success' => 'Registration Successful.']);
         } else {
             // Return an error message if required fields are missing
             echo json_encode(['error' => 'Required fields are missing!']);
